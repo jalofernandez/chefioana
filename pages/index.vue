@@ -14,7 +14,7 @@
           height="40"
         >
       </NuxtLink>
-      <h1 class="title">
+      <h1 class="title" v-if="$mq !== 'mobile'">
         chefioana
       </h1>
       <div class="links">

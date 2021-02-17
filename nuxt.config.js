@@ -81,6 +81,7 @@ export default {
 
   modules: [
     'nuxt-webfontloader',
+    'nuxt-mq',
     '@nuxtjs/robots',
     // IMP!: always declare the sitemap module at end of array
     '@nuxtjs/sitemap',
@@ -90,6 +91,19 @@ export default {
     google: {
       families: ['Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap']
     },
+  },
+
+  mq: {
+    defaultBreakpoint: "desktop",
+    breakpoints: {
+      mobile: 600,
+      smartphone: 768,
+      tablet: 1024,
+      laptop: 1280,
+      desktop: 1400,
+      desktopWide: 2000,
+      desktopUltraWide: Infinity
+    }
   },
 
   robots: {
