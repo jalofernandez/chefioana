@@ -1,42 +1,56 @@
 <template>
-  <div class="container">
-    <div>
-      <NuxtLink
-        class="navbar-item has-logo"
-        to="/"
-        :title="`Ir a la página de inicio de ${owner.nickname}`"
-      >
-        <img
-          :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
-          :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          width="132"
-          height="40"
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <NuxtLink
+          class="navbar-item has-logo"
+          to="/"
+          :title="`Ir a la página de inicio de ${owner.nickname}`"
         >
-      </NuxtLink>
-      <h1 class="title" v-if="$mq !== 'mobile'">
-        chefioana
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          {{ owner.nickname }}
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          {{ owner.currentYear }}
-        </a>
+          <img
+            :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
+            :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+            :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+            width="132"
+            height="40"
+          >
+        </NuxtLink>
+
+        <h1 class="title" v-if="$mq !== 'mobile'">
+          chefioana
+        </h1>
+
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Cita previa por <b>teléfono</b>:</p>
+              <a
+                href="https://nuxtjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button--green"
+              >
+                {{ owner.nickname }}
+              </a>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Cita previa por <b>chat</b>:</p>
+              <a
+                href="https://github.com/nuxt/nuxt.js"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button--grey"
+              >
+                {{ owner.currentYear }}
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
