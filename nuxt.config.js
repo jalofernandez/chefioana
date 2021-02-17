@@ -68,6 +68,7 @@ export default {
   },
 
   css: [
+    '@/assets/styles.sass'
   ],
 
   plugins: [
