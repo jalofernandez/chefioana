@@ -80,7 +80,7 @@ export default {
   ],
 
   modules: [
-    '@nuxtjs/bulma',
+    // '@nuxtjs/bulma', // commented in order to avoid loads Bulma twice
     'nuxt-webfontloader',
     'nuxt-mq',
     '@nuxtjs/robots',
