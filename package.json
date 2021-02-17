@@ -1,6 +1,7 @@
 {
   "name": "chefioana",
   "version": "1.0.0",
+  "description": "Chef Ioana landing page to get a private chef at home to top level dinners",
   "private": true,
   "scripts": {
     "dev": "nuxt",
