@@ -82,6 +82,8 @@ export default {
   modules: [
     'nuxt-webfontloader',
     '@nuxtjs/robots',
+    // IMP!: always declare the sitemap module at end of array
+    '@nuxtjs/sitemap',
   ],
 
   webfontloader: {
@@ -94,6 +96,17 @@ export default {
     UserAgent: '*',
     Allow: '/',
     Sitemap: `https://` + url + `/sitemap.xml`,
+  },
+
+  sitemap: {
+    hostname: `https://` + url,
+    gzip: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+      lastmodrealtime: true,
+    },
   },
 
   build: {
