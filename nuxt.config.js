@@ -79,7 +79,14 @@ export default {
   ],
 
   modules: [
+    '@nuxtjs/robots',
   ],
+
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Sitemap: `https://` + url + `/sitemap.xml`,
+  },
 
   build: {
     postcss: {
