@@ -80,8 +80,15 @@ export default {
   ],
 
   modules: [
+    'nuxt-webfontloader',
     '@nuxtjs/robots',
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap']
+    },
+  },
 
   robots: {
     UserAgent: '*',
