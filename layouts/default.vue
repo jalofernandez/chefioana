@@ -25,7 +25,7 @@
                 :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
                 :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-                width="92"
+                width="80"
                 height="92"
               >
             </NuxtLink>

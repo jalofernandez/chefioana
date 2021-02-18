@@ -25,21 +25,20 @@ html
   -webkit-font-smoothing: antialiased
   box-sizing: border-box
 
-.navbar-item
-  &.has-logo
-    padding-top: .25rem
-    padding-bottom: .25rem
-    opacity: 1 // to overwrite a little bug
-    animation: 1s animAppear
-    img
-      max-height: 2.5rem
+.has-logo
+  padding-top: .25rem
+  padding-bottom: .25rem
+  opacity: 1 // to overwrite a little bug
+  animation: 1s animAppear
+  // img
+  //   max-height: 2.5rem
 
 // NAVBARS & item links
 .navbar
   &:not(.is-transparent)
     backdrop-filter: $backdrop
   &.top-bar
-    border-bottom: 1px solid darken($fucsia, 5%)
+    // border-bottom: 1px solid darken($fucsia, 5%)
     .level
       width: 100%
   &.bottom-bar
@@ -82,6 +81,32 @@ html
   @media (max-width: 768px)
     padding: 1rem
 
+@media (min-width: 980px)
+  .reflected .columns .column:first-child
+    order: 2
+
+.container
+  .content figure img:not(.is-rounded)
+    border-radius: 5px
+  @media (min-width: 980px)
+    &:not(.reflected) .content figure
+      margin-right: 0
+    &.reflected .content figure
+      margin-left: 0
+  @media (max-width: 979px)
+    .content figure
+      margin-right: 0
+  @media (max-width: 768px)
+    .content figure
+      margin: 0
+
+.th-margin
+  margin-bottom: 3rem
+  @media (max-width: 768px) and (min-width: 600px)
+    margin-bottom: 1.5rem
+  @media (max-width: 599px)
+    margin-bottom: 0
+
 // mobile´s ASIDE navigation Menu
 .navbar-burger
   width: 4rem
@@ -112,6 +137,12 @@ html
         transform: translateY(7px) rotate(45deg)
       &:nth-child(3)
         transform: translateY(-9px) rotate(-45deg)
+
+.index
+  .media
+    max-width: 600px
+    margin: 0 auto
+    border: none
 
 // Animations
 @keyframes animAppear
