@@ -65,6 +65,7 @@ export default {
     const description =
       this.owner.copyright + ' Chef a domicilio para comer en tu casa como en el mejor restaurante y sin molestias. Reservas e información: 644 09 34 70'
     const canonical = 'https://' + this.owner.url
+    const canonicalDev = 'https://' + this.owner.alias + '.firebaseapp.com'
 
     return {
       title,
@@ -92,6 +93,7 @@ export default {
         { rel: 'canonical', hid: 'canonical', href: canonical },
         { rel: 'alternate', hid: 'alternate', href: canonical+'/#!' },
         { rel: 'alternate', hid: 'alternate', href: canonical+'#!' },
+        { rel: 'alternate', hid: 'alternate', href: canonicalDev },
       ]
     }
   }

@@ -1,11 +1,13 @@
 const nickname = 'Chef Ioana'
+const alias = 'chefioana'
 const business = nickname + ' en tu casa'
 const url = 'ioanachefentucasa.com'
-const email = 'chefioana@gmail.com'
+const email = alias + '@gmail.com'
 
 export const state = () => ({
   name: 'Ioana Botis',
   nickname: nickname,
+  alias: alias,
   url: url,
   email: email,
   copyright: business,
