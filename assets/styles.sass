@@ -28,3 +28,15 @@
 .links
   padding-top: 15px
   animation: 1.5s animAppear
+
+// Animations
+.chefioana-transition-enter-active
+  transition: all .3s ease
+
+.chefioana-transition-leave-active
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+.chefioana-transition-enter,
+.chefioana-transition-leave-to
+  transform: translateX(10px)
+  opacity: 0

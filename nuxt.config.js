@@ -71,10 +71,15 @@ export default {
     '@/assets/styles.sass'
   ],
 
-  plugins: [
-  ],
+  transition: {
+    name: 'chefioana-transition',
+    mode: 'out-in'
+  },
 
   components: true,
+
+  plugins: [
+  ],
 
   buildModules: [
   ],
