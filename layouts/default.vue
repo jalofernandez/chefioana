@@ -8,39 +8,41 @@
       v-if="$mq !== 'mobile' && $mq !== 'smartphone' && $mq !== 'tablet'"
     >
       <div class="container">
-        <div class="navbar-brand has-text-centered">
-          <NuxtLink
-            class="navbar-item has-logo"
-            to="/"
-            :title="`Ir a la página de inicio de ${owner.nickname}`"
-          >
-            <img
-              :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
-              :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-              :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-              width="92"
-              height="92"
+        <nav class="level">
+          <!-- <p class="level-item has-text-centered">
+            <a class="link is-info">Inicio</a>
+          </p>
+          <p class="level-item has-text-centered">
+            <a class="link is-info">Sobre Ioana</a>
+          </p> -->
+          <p class="level-item has-text-centered navbar-brand">
+            <NuxtLink
+              class="navbar-item has-logo"
+              to="/"
+              :title="`Ir a la página de inicio de ${owner.nickname}`"
             >
-          </NuxtLink>
-        </div>
-        <div class="navbar-end">
-          <NuxtLink
-            class="navbar-item index"
-            to="/"
-            :title="`Página de Inicio de ${owner.copyright}`"
-          >
-            Inicio
-          </NuxtLink>
-          <!-- <NuxtLink
-            :class="['navbar-item', item.page]"
-            :to="item.page"
-            :title="`${item.name} de ${owner.copyright}`"
-            v-for="(item, index) in navLinks"
-            :key="index"
-          >
-            {{ item.name }}
-          </NuxtLink> -->
-        </div>
+              <img
+                :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
+                :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+                :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+                width="92"
+                height="92"
+              >
+            </NuxtLink>
+          </p>
+          <!-- <p class="level-item has-text-centered">
+            <a class="link is-info">Menu</a>
+          </p>
+          <p class="level-item has-text-centered">
+            <NuxtLink
+              class="navbar-item index"
+              to="/"
+              :title="`Página de Inicio de ${owner.copyright}`"
+            >
+              Contacto
+            </NuxtLink>
+          </p> -->
+        </nav>
       </div>
     </nav>
     <transition name="chefioana-transition" appear>
@@ -80,21 +82,6 @@
           </NuxtLink>
         </transition>
         <transition name="chefioana-transition" :duration="{ enter: 500, leave: 800 }" appear>
-          <!-- <a
-            class="navbar-item schedule"
-            href="#modal_schedule"
-            :title="`Horario comercial de ${owner.copyright}`"
-            @click.prevent="toggleShow()"
-          >
-            Horario
-          </a>
-          <NuxtLink
-            :class="`navbar-item ${pages.links[4].page}`"
-            :to="pages.links[4].page"
-            :title="`Mapa del sitio web de ${owner.copyright}`"
-          >
-            {{ pages.links[4].name }}
-          </NuxtLink> -->
           <a
             class="whatsapp"
             :href="`https://wa.me/34${owner.phone}`"

@@ -1,15 +1,12 @@
 <template>
-  <section class="hero is-halfheight">
+  <section class="hero is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title text-shadow is-size-1 is-size-3-mobile" v-if="$mq !== 'mobile'">
-          <span class="has-text-success">Chef</span> Ioana va a tu casa
+        <h1 class="title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
+          <b class="has-text-primary">Chef</b> Ioana <b class="has-text-primary">en casa</b>
         </h1>
         <h2 class="subtitle is-size-5 is-size-6-mobile">
-          #{{ owner.name }}
-          <span class="has-text-weight-medium">digitaliza tus productos</span>
-          y <span class="has-text-weight-medium">servicios</span> para
-          <b class="has-text-link">vender más</b>
+          <span class="has-text-weight-medium">Come en tu casa como en el mejor restaurante</span>
         </h2>
       </div>
     </div>
@@ -20,55 +17,43 @@
             <div class="card mb-2">
               <div class="card-bg-img is-mobile-apps"></div>
               <div class="card-content">
-                <p class="subtitle is-size-5 is-size-6-mobile">
-                  <b class="has-text-success">Únete</b> a la
-                  <span class="has-text-weight-medium">transformación digital</span>
-                  optimizando el rendimiento de tu negocio. Internet
-                  <span class="has-text-weight-medium">suma</span>.
-                </p>
+                <h3 class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-primary">Comodísimo</b>
+                  <br class="is-hidden-touch" />
+                  porque te llevamos la comida a casa, la 
+                  <span class="has-text-weight-medium">cocinamos</span>,
+                  te <span class="has-text-weight-medium">servimos</span> y 
+                  <span class="has-text-weight-medium">limpiamos</span> después
+                  y sin cortes adicionales.
+                </h3>
               </div>
-              <!-- <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    <a href="#">Saber más</a>
-                  </span>
-                </p>
-              </footer> -->
             </div>
           </div>
           <div class="level-item has-text-centered">
             <div class="card mb-2">
               <div class="card-bg-img is-mobile-marketing"></div>
               <div class="card-content">
-                <p class="subtitle is-size-5 is-size-6-mobile">
-                  <b class="has-text-success">Aumenta</b>
-                  <span class="has-text-weight-medium">la visibilidad</span>
-                  de tus productos y servicios fácilmente a través de
-                  <span class="has-text-weight-medium">redes sociales</span>,
-                  <span class="has-text-weight-medium">whatsapp</span>...
-                </p>
+                <h3 class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-primary">Todo ventajas</b>
+                  <br class="is-hidden-touch" />
+                  porque no necesitas salir de casa, tienes 
+                  <span class="has-text-weight-medium">chef y servicio en exclusiva</span>,
+                  sin las molestias de comprar, cocinar, fregar...
+                </h3>
               </div>
-              <!-- <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    <a href="#">Saber más</a>
-                  </span>
-                </p>
-              </footer> -->
             </div>
           </div>
           <div class="level-item has-text-centered">
             <div class="card mb-2">
               <div class="card-bg-img is-online-world"></div>
               <div class="card-content">
-                <p class="subtitle is-size-5 is-size-6-mobile">
-                  <b class="has-text-success">Incrementa</b>
-                  <span class="has-text-weight-medium">tus ventas</span>
-                  porque en internet tu negocio abre
-                  <span class="has-text-weight-medium">24 días</span> a la semana y
-                  <span class="has-text-weight-medium">365 días</span>
-                  al año.
-                </p>
+                <h3 class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-primary">Variado y seguro</b>
+                  <br class="is-hidden-touch" />
+                  porque disponemos de un <span class="has-text-weight-medium">amplio menú</span>
+                  con arroces, carnes maduradas, marisco... Y con
+                  <span class="has-text-weight-medium">medidas anticovid-19</span> por tu seguridad.
+                </h3>
               </div>
               <!-- <footer class="card-footer">
                 <p class="card-footer-item">

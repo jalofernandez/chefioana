@@ -15,6 +15,7 @@
   padding: 0
 
 html
+  color: #481300
   font-family: 'Montserrat', sans-serif
   font-size: 16px
   word-spacing: 1px
@@ -39,6 +40,8 @@ html
     backdrop-filter: $backdrop
   &.top-bar
     border-bottom: 1px solid darken($fucsia, 5%)
+    .level
+      width: 100%
   &.bottom-bar
     border-top: 1px solid darken($fucsia, 5%)
     .navbar-brand
@@ -48,42 +51,36 @@ html
         padding: .25rem
         margin-right: .75rem
 
-.title
-  display: block
-  font-weight: 300
-  font-size: 100px
-  color: #35495e
-  letter-spacing: 1px
+.title, .subtitle
   animation: .5s animAppear
-
-.subtitle
-  font-weight: 300
-  font-size: 42px
-  color: #526488
-  word-spacing: 5px
-  padding-bottom: 15px
-  animation: .75s animAppear
 
 .links
   padding-top: 15px
   animation: 1.5s animAppear
 
-.level .card
-  width: 250px
-  @media (max-width: 768px)
-    width: 275px
+.level
+  align-items: flex-start
+  .card
+    width: 250px
+    @media (max-width: 768px)
+      // width: 275px
+      width: calc(100% - 2rem)
 
 .card-bg-img
   width: 200px
-  height: 200px
-  // background-size: 200px 200px
+  height: 100px
+  // background-size: 200px 100px
   @media (max-width: 480px)
     width: 150px
-    height: 150px
-    // background-size: 150px 150px
+    height: 75px
+    // background-size: 150px 75px
 
 .card-bg-img + .card-content
   padding-top: 0
+
+.card-content
+  @media (max-width: 768px)
+    padding: 1rem
 
 // mobile´s ASIDE navigation Menu
 .navbar-burger
