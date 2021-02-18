@@ -1,15 +1,54 @@
 @import "_bulma"
 
-.has-logo
-  animation: 1s animAppear
-  margin: auto
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
 
-@keyframes animAppear
-  0%
-    opacity: 0
+::selection
+  background: black
+  color: white
+
+::-moz-focus-inner
+  border: 0
+  padding: 0
+
+html
+  font-family: 'Montserrat', sans-serif
+  font-size: 16px
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+.navbar-item
+  &.has-logo
+    padding-top: .25rem
+    padding-bottom: .25rem
+    opacity: 1 // to overwrite a little bug
+    animation: 1s animAppear
+    img
+      max-height: 2.5rem
+
+// NAVBARS & item links
+.navbar
+  &:not(.is-transparent)
+    backdrop-filter: $backdrop
+  &.top-bar
+    border-bottom: 1px solid darken($fucsia, 5%)
+  &.bottom-bar
+    border-top: 1px solid darken($fucsia, 5%)
+    .navbar-brand
+      justify-content: space-between
+      align-items: center
+      .whatsapp .image
+        padding: .25rem
+        margin-right: .75rem
 
 .title
-  font-family: 'Montserrat', sans-serif
   display: block
   font-weight: 300
   font-size: 100px
@@ -29,7 +68,59 @@
   padding-top: 15px
   animation: 1.5s animAppear
 
+.level .card
+  width: 250px
+  @media (max-width: 768px)
+    width: 275px
+
+.card-bg-img
+  width: 200px
+  height: 200px
+  // background-size: 200px 200px
+  @media (max-width: 480px)
+    width: 150px
+    height: 150px
+    // background-size: 150px 150px
+
+.card-bg-img + .card-content
+  padding-top: 0
+
+// mobile´s ASIDE navigation Menu
+.navbar-burger
+  width: 4rem
+  margin-left: initial // overwrite Bulma style
+  &:hover
+    background-color: transparent
+  &:not(.is-active), &:not(.is-active):hover
+    color: transparent
+  span
+    height: 3px
+    border-radius: 3px
+    color: yellow
+    left: calc(50% - 15px)
+    &:nth-child(1)
+      width: 24px
+      top: calc(50% - 9px)
+    &:nth-child(2)
+      width: 28px
+    &:nth-child(3)
+      width: 20px
+      top: calc(50% + 7px)
+  &.is-active, &.is-active:hover
+    span
+      color: orange
+      &:nth-child(1), &:nth-child(3)
+        width: 26px
+      &:nth-child(1)
+        transform: translateY(7px) rotate(45deg)
+      &:nth-child(3)
+        transform: translateY(-9px) rotate(-45deg)
+
 // Animations
+@keyframes animAppear
+  0%
+    opacity: 0
+
 .chefioana-transition-enter-active
   transition: all .3s ease
 

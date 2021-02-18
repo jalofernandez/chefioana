@@ -1,53 +1,85 @@
 <template>
-  <section class="hero is-small">
+  <section class="hero is-halfheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <NuxtLink
-          class="navbar-item has-logo"
-          to="/"
-          :title="`Ir a la página de inicio de ${owner.nickname}`"
-        >
-          <img
-            :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
-            :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-            :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-            width="132"
-            height="40"
-          >
-        </NuxtLink>
-
-        <h1 class="title" v-if="$mq !== 'mobile'">
-          chefioana
+        <h1 class="title text-shadow is-size-1 is-size-3-mobile" v-if="$mq !== 'mobile'">
+          <span class="has-text-success">Chef</span> Ioana va a tu casa
         </h1>
-
-        <nav class="level">
+        <h2 class="subtitle is-size-5 is-size-6-mobile">
+          #{{ owner.name }}
+          <span class="has-text-weight-medium">digitaliza tus productos</span>
+          y <span class="has-text-weight-medium">servicios</span> para
+          <b class="has-text-link">vender más</b>
+        </h2>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <div class="container">
+        <div class="level">
           <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">Cita previa por <b>teléfono</b>:</p>
-              <a
-                href="https://nuxtjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button--green"
-              >
-                {{ owner.nickname }}
-              </a>
+            <div class="card mb-2">
+              <div class="card-bg-img is-mobile-apps"></div>
+              <div class="card-content">
+                <p class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-success">Únete</b> a la
+                  <span class="has-text-weight-medium">transformación digital</span>
+                  optimizando el rendimiento de tu negocio. Internet
+                  <span class="has-text-weight-medium">suma</span>.
+                </p>
+              </div>
+              <!-- <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a href="#">Saber más</a>
+                  </span>
+                </p>
+              </footer> -->
             </div>
           </div>
           <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">Cita previa por <b>chat</b>:</p>
-              <a
-                href="https://github.com/nuxt/nuxt.js"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button--grey"
-              >
-                {{ owner.currentYear }}
-              </a>
+            <div class="card mb-2">
+              <div class="card-bg-img is-mobile-marketing"></div>
+              <div class="card-content">
+                <p class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-success">Aumenta</b>
+                  <span class="has-text-weight-medium">la visibilidad</span>
+                  de tus productos y servicios fácilmente a través de
+                  <span class="has-text-weight-medium">redes sociales</span>,
+                  <span class="has-text-weight-medium">whatsapp</span>...
+                </p>
+              </div>
+              <!-- <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a href="#">Saber más</a>
+                  </span>
+                </p>
+              </footer> -->
             </div>
           </div>
-        </nav>
+          <div class="level-item has-text-centered">
+            <div class="card mb-2">
+              <div class="card-bg-img is-online-world"></div>
+              <div class="card-content">
+                <p class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-success">Incrementa</b>
+                  <span class="has-text-weight-medium">tus ventas</span>
+                  porque en internet tu negocio abre
+                  <span class="has-text-weight-medium">24 días</span> a la semana y
+                  <span class="has-text-weight-medium">365 días</span>
+                  al año.
+                </p>
+              </div>
+              <!-- <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a href="#">Saber más</a>
+                  </span>
+                </p>
+              </footer> -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
