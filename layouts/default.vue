@@ -8,13 +8,27 @@
       v-if="$mq !== 'mobile' && $mq !== 'smartphone' && $mq !== 'tablet'"
     >
       <div class="container">
-        <nav class="level">
-          <!-- <p class="level-item has-text-centered">
-            <a class="link is-info">Inicio</a>
+        <nav class="level is-align-items-center">
+          <p class="level-item has-text-centered">
+            <NuxtLink
+              class="navbar-item link is-info"
+              :to="{ path: '/', hash:'#section-intro'}"
+              v-scroll-to="{ el: '#section-intro', offset: -120 }"
+              title="Ir a la sección de Inicio"
+            >
+              Inicio
+            </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
-            <a class="link is-info">Sobre Ioana</a>
-          </p> -->
+            <NuxtLink
+              class="navbar-item link is-info"
+              :to="{ path: '/', hash:'#section-confortable'}"
+              v-scroll-to="{ el: '#section-confortable', offset: getOffset() }"
+              title="Ir a la sección de Chef en casa"
+            >
+              Chef en casa
+            </NuxtLink>
+          </p>
           <p class="level-item has-text-centered navbar-brand">
             <NuxtLink
               class="navbar-item has-logo"
@@ -30,18 +44,26 @@
               >
             </NuxtLink>
           </p>
-          <!-- <p class="level-item has-text-centered">
-            <a class="link is-info">Menu</a>
+          <p class="level-item has-text-centered">
+            <NuxtLink
+              class="navbar-item link is-info"
+              :to="{ path: '/', hash:'#section-advantages'}"
+              v-scroll-to="{ el: '#section-advantages', offset: getOffset() }"
+              title="Ir a la sección de Ventajas"
+            >
+              Ventajas
+            </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
             <NuxtLink
-              class="navbar-item index"
-              to="/"
-              :title="`Página de Inicio de ${owner.copyright}`"
+              class="navbar-item link is-info"
+              :to="{ path: '/', hash:'#section-safety'}"
+              v-scroll-to="{ el: '#section-safety', offset: getOffset() }"
+              title="Ir a la sección de Menu y seguridad"
             >
-              Contacto
+              Menu y seguridad
             </NuxtLink>
-          </p> -->
+          </p>
         </nav>
       </div>
     </nav>
@@ -76,8 +98,8 @@
               :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
               :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
               :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-              width=""
-              height="60"
+              width="66"
+              height="50"
             >
           </NuxtLink>
         </transition>
@@ -90,13 +112,13 @@
             rel="noopener noreferrer"
             v-if="!isMenuShown"
           >
-            <figure class="image is-60x60" v-if="!isMenuShown">
+            <figure class="image is-48x48" v-if="!isMenuShown">
               <img
                 :src="require(`~/static/whatsapp-brands.svg`)"
                 alt="Icono de WhatsApp"
                 title="Icono de WhatsApp"
-                width="60"
-                height="60"
+                width="48"
+                height="48"
               />
             </figure>
           </a>
@@ -113,6 +135,15 @@ export default {
       isMenuShown: false,
       owner: this.$store.state.owner
     }
+  },
+  methods: {
+    getOffset() {
+      let mq = this.$mq
+      if (mq === 'mobile' || mq === 'smartphone' || mq === 'tablet') {
+        return 0 // layout without top navbar (small screens)
+      }
+      return -53 // layout with top navbar (big screens)
+    },
   }
 }
 </script>

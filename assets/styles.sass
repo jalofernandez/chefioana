@@ -32,30 +32,46 @@ body, button, input, optgroup, select, textarea
   font-family: 'Akaya Telivigala', cursive
   &.has-text-weight-bold
     letter-spacing: 0.03rem
+
+// .image.is-60x60
+//   height: 60px
+//   width: 60px
+
 .has-logo
   padding-top: .25rem
   padding-bottom: .25rem
   opacity: 1 // to overwrite a little bug
   img
     max-height: initial
-    height: 60px
+    height: 50px
 
 // NAVBARS & item links
 .navbar
-  &:not(.is-transparent)
-    backdrop-filter: $backdrop
   &.top-bar
     // border-bottom: 1px solid darken($fucsia, 5%)
+    background-color: $color-bg-opacity
+    backdrop-filter: $backdrop
     .level
       width: 100%
+    .navbar-item
+      font-family: 'Akaya Telivigala', cursive
+      font-size: 1.33rem
+      &.is-active
+        color: $color-main
   &.bottom-bar
-    box-shadow: 0px 5px 2px #ccc, 0px -3px 10px #ccc
+    // box-shadow: 0px 5px 2px #ccc, 0px -3px 10px #ccc
+    background-color: transparent
     .navbar-brand
       justify-content: space-between
       align-items: center
+      margin: 0 1rem 1rem 1rem
+      background-color: rgba(white,.6)
+      backdrop-filter: saturate(180%) blur(5px)
+      box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+      border-radius: 50px
       .whatsapp .image
         padding: .25rem
-        margin-right: .75rem
+        margin-right: .33rem
 
 .title, .subtitle
   animation: .5s animAppear
@@ -99,6 +115,11 @@ body, button, input, optgroup, select, textarea
   .content
     figure, video
       margin: 0
+  @media (min-width: 980px)
+    &.reflected .column.has-custom-margin
+      margin-left: 1rem
+    &:not(.reflected) .column.has-custom-margin
+      margin-right: 1rem
 
 .has-frame
   position: relative
@@ -140,7 +161,7 @@ body, button, input, optgroup, select, textarea
   &:not(.is-active), &:not(.is-active):hover
     color: transparent
   span
-    height: 3px
+    height: 4px
     border-radius: 3px
     color: brown
     left: calc(50% - 15px)
