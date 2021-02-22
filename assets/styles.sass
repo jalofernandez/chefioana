@@ -16,7 +16,6 @@
 
 html
   color: #481300
-  font-family: 'Montserrat', sans-serif
   font-size: 16px
   word-spacing: 1px
   -ms-text-size-adjust: 100%
@@ -25,10 +24,14 @@ html
   -webkit-font-smoothing: antialiased
   box-sizing: border-box
 
-.image.is-60x60
-  height: 60px
-  width: 60px
+body, button, input, optgroup, select, textarea
+  font-family: 'Montserrat', sans-serif
+  // font-family: 'Roboto Slab', serif
 
+.is-title, .title
+  font-family: 'Akaya Telivigala', cursive
+  &.has-text-weight-bold
+    letter-spacing: 0.03rem
 .has-logo
   padding-top: .25rem
   padding-bottom: .25rem
