@@ -3,7 +3,7 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
+          <h1 id="section-intro" class="title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
             <b class="has-text-primary">Chef</b> Ioana <b class="has-text-primary">en casa</b>
           </h1>
           <h2 class="subtitle is-size-5 is-size-6-mobile">
@@ -80,7 +80,7 @@ export default {
         {
           title: 'Comodísimo',
           description:
-            'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span> y  y sin cortes adicionales.',
+            'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span> y  y sin costes adicionales.',
           link: 'confortable'
         },
         {
@@ -137,7 +137,7 @@ export default {
           reflected: false
         },
         {
-          title: '<small class="has-text-weight-light">...Y</small> sin cortes adicionales',
+          title: '<small class="has-text-weight-light">...Y</small> sin costes adicionales',
           description:
             '<b>Sin tener que pagar extras</b> de envío, o incremento por terraza... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas expeciales</b> para determinados gremios.',
           link: 'Reservar en el',

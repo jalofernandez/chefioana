@@ -6,18 +6,24 @@
       :key="index"
     >
       <div class="columns is-vcentered content is-medium">
-        <div class="column is-6">
+        <div class="column is-6 has-custom-margin">
           <h2
             :class="[
-              'is-size-4-mobile',
+              'is-title',
+              'is-size-2-widescreen',
+              'is-size-3-desktop',
+              'is-size-4-touch',
               'has-text-primary',
               'is-relative',
-              $mq == 'mobile' ? 'has-text-weight-bold' : 'has-text-weight-medium'
+              $mq == 'mobile' || $mq == 'smartphone' ? 'has-text-weight-bold' : 'has-text-weight-medium'
             ]"
             v-html="item.title"
           >
           </h2>
-          <p class="is-size-4 is-size-6-mobile" v-html="item.description"></p>
+          <p
+            class="is-size-4-fullhd is-size-4-widescreen is-size-5-desktop is-size-6-touch"
+            v-html="item.description"
+          ></p>
           <!-- <NuxtLink
             :to="{ name: item.to }"
             :class="['th-link', { 'is-size-6-mobile': $mq == 'mobile' }]"

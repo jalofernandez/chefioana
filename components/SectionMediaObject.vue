@@ -19,7 +19,15 @@
               </figure>
               <div class="media-content">
                 <div class="content">
-                  <h4 class="has-text-primary">
+                  <h4
+                    :class="[
+                      'is-title',
+                      'is-size-3',
+                      'is-size-5-mobile',
+                      'has-text-primary',
+                      $mq == 'mobile' || $mq == 'smartphone' ? 'has-text-weight-bold' : 'has-text-weight-medium'
+                    ]"
+                  >
                     {{ media.title }}
                   </h4>
                   <p class="is-size-5 is-size-6-mobile" v-if="media.description">
