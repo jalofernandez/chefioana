@@ -25,13 +25,17 @@ html
   -webkit-font-smoothing: antialiased
   box-sizing: border-box
 
+.image.is-60x60
+  height: 60px
+  width: 60px
+
 .has-logo
   padding-top: .25rem
   padding-bottom: .25rem
   opacity: 1 // to overwrite a little bug
-  animation: 1s animAppear
-  // img
-  //   max-height: 2.5rem
+  img
+    max-height: initial
+    height: 60px
 
 // NAVBARS & item links
 .navbar
@@ -42,7 +46,7 @@ html
     .level
       width: 100%
   &.bottom-bar
-    border-top: 1px solid darken($fucsia, 5%)
+    box-shadow: 0px 5px 2px #ccc, 0px -3px 10px #ccc
     .navbar-brand
       justify-content: space-between
       align-items: center
@@ -86,19 +90,36 @@ html
     order: 2
 
 .container
-  .content figure img:not(.is-rounded)
+  .content figure img:not(.is-rounded),
+  .content video
     border-radius: 5px
-  @media (min-width: 980px)
-    &:not(.reflected) .content figure
-      margin-right: 0
-    &.reflected .content figure
-      margin-left: 0
-  @media (max-width: 979px)
-    .content figure
-      margin-right: 0
-  @media (max-width: 768px)
-    .content figure
+  .content
+    figure, video
       margin: 0
+
+.has-frame
+  position: relative
+  picture
+    position: absolute
+    &:not(.is-frame)
+      z-index: 1
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+    &.is-frame
+      z-index: 2
+      width: calc(100% + 4px)
+      height: calc(100% + 4px)
+      top: -2px
+      bottom: -2px
+      right: -2px
+      left: -2px
+
+.reflected .has-frame picture.is-frame img
+  transform: rotate(180deg)
 
 .th-margin
   margin-bottom: 3rem
@@ -118,16 +139,21 @@ html
   span
     height: 3px
     border-radius: 3px
-    color: yellow
+    color: brown
     left: calc(50% - 15px)
     &:nth-child(1)
-      width: 24px
-      top: calc(50% - 9px)
+      // width: 24px
+      // top: calc(50% - 9px)
+      width: 30px
+      top: calc(50% - 12px)
     &:nth-child(2)
-      width: 28px
+      // width: 28px
+      width: 38px
     &:nth-child(3)
-      width: 20px
-      top: calc(50% + 7px)
+      // width: 20px
+      // top: calc(50% + 7px)
+      width: 24px
+      top: calc(50% + 10px)
   &.is-active, &.is-active:hover
     span
       color: orange

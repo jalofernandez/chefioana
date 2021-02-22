@@ -71,7 +71,7 @@
     </section>
 
     <SectionTitle :header="header.features" />
-    <SectionChessBoard :blocks="blocks" :page="$route.name"/>
+    <SectionChessBoard :items="features" :page="$route.name"/>
 
     <SectionTitle :header="header.pros" />
     <SectionMediaObject :media="pros" />
@@ -93,15 +93,18 @@ export default {
         pros: 'Son todo ventajas',
         menu: 'Todo lo que te puedo ofrecer',
       },
-      blocks: [
+      features: [
         {
           title: '<small class="has-text-weight-light">...Porque</small> cocino en tu casa',
           description:
             'Llegaré a tu casa con tiempo suficiente para cocinar el menú acordado previamente. Si eres fan de los fogones aprovecha para quedarte durante la preparación de los platos y así aprender de una cocinaera profesional.',
           link: 'Reservar en el',
           href: 'tel:644093470',
-          img: this.$route.name + '/640x360.png',
-          alt: 'Ioana Botis',
+          asset: {
+            video: true,
+            src: 'chefioana-video-menu-tapas.mp4',
+            alt: 'Ioana Botis'
+          },
           reflected: false
         },
         {
@@ -110,8 +113,11 @@ export default {
             'Yo en persona me encargaré del servicio de mesa, explicándote los detalles de cada plato si así lo deseáis y al ritmo que cada comensal prefiera, sin prisas o con ellas. El servicio será discreto y profesional, para garantizar una velada cómoda y discreta.',
           link: 'Reservar en el',
           href: 'tel:644093470',
-          img: this.$route.name + '/640x360.png',
-          alt: 'Ioana Botis',
+          asset: {
+            video: true,
+            src: 'chefioana-video-menu-limpieza.mp4',
+            alt: 'Ioana Botis'
+          },
           reflected: true
         },
         {
@@ -120,8 +126,11 @@ export default {
             'Y antes de irme limpiaré la cocina, la vajilla y los utensilios utilizados tanto en la elaboración como en la degustación del menú. Podrás disfrutar de una sobremesa sin prisas, sabiendo que liumpian por ti.',
           link: 'Reservar en el',
           href: 'tel:644093470',
-          img: this.$route.name + '/640x360.png',
-          alt: 'Ioana Botis',
+          asset: {
+            video: false,
+            src: '640x360.png',
+            alt: 'Ioana Botis'
+          },
           reflected: false
         },
         {
@@ -130,8 +139,11 @@ export default {
             'Sin tener que pagar extras de envío, o incremento por terraza... El precio no variará respecto al menú pactado previa cita. Además disponemos de ofertas expeciales para determinados gremios.',
           link: 'Reservar en el',
           href: 'tel:644093470',
-          img: this.$route.name + '/640x360.png',
-          alt: 'Ioana Botis',
+          asset: {
+            video: false,
+            src: '640x360.png',
+            alt: 'Ioana Botis'
+          },
           reflected: true
         }
       ],
@@ -140,35 +152,35 @@ export default {
           title: '¡Es comodísimo!',
           description:
             'No necesitas salir de casa ni coger el coche, aguantar el tráfico, tener que dar vueltas para aparcar o pagar parking, la pereza de que haga mal tiempo...',
-          img: this.$route.name + '/128x128.png',
+          img: '128x128.png',
           alt: '¡Es comodísimo!'
         },
         {
           title: '¡Es exclusivo!',
           description:
             'Tienes al cocinero / camarero en exclusiva para ti y tus comensales sin tiempos de espera, ni guardar cola y al ritmo que tú marques.',
-          img: this.$route.name + '/128x128.png',
+          img: '128x128.png',
           alt: '¡Es exclusivo!'
         },
         {
           title: '¡Sin molestias!',
           description:
             'Tener que hacer la compra, cocinar, fregar...',
-          img: this.$route.name + '/128x128.png',
+          img: '128x128.png',
           alt: '¡Es molestias!'
         },
         {
           title: '¡El mismo precio!',
           description:
             'Te cuesta igual que en La Antigua Bodeguita, sin costes adicionales de trasporte, incremento por terraza...',
-          img: this.$route.name + '/128x128.png',
+          img: '128x128.png',
           alt: '¡Es mismo precio!'
         },
         {
           title: '¡Con quien tú quieras!',
           description:
             'Niños y mascotas permitidas.',
-          img: this.$route.name + '/128x128.png',
+          img: '128x128.png',
           alt: '¡Con quien tú quieras!'
         },
       ]

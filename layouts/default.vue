@@ -76,8 +76,8 @@
               :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
               :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
               :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-              width="92"
-              height="92"
+              width=""
+              height="60"
             >
           </NuxtLink>
         </transition>
@@ -90,13 +90,13 @@
             rel="noopener noreferrer"
             v-if="!isMenuShown"
           >
-            <figure class="image is-48x48" v-if="!isMenuShown">
+            <figure class="image is-60x60" v-if="!isMenuShown">
               <img
                 :src="require(`~/static/whatsapp-brands.svg`)"
                 alt="Icono de WhatsApp"
                 title="Icono de WhatsApp"
-                width="48"
-                height="48"
+                width="60"
+                height="60"
               />
             </figure>
           </a>

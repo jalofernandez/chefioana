@@ -2,30 +2,34 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <article class="media mb-4" v-for="media in media" :key="media.title">
-          <figure class="media-left">
-            <p class="image is-128x128">
-              <img
-                class="is-rounded"
-                :src="require(`~/assets/images/${media.img}`)"
-                :title="media.alt"
-                :alt="media.alt"
-                width="128"
-                height="128"
-              >
-            </p>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h4 class="has-text-primary">
-                {{ media.title }}
-              </h4>
-              <p v-if="media.description">
-                {{ media.description }}
-              </p>
-            </div>
+        <div class="columns is-vcentered is-flex-wrap-wrap content is-medium">
+          <div class="column is-6" v-for="media in media" :key="media.title">
+            <article class="media mb-4">
+              <figure class="media-left mr-4">
+                <p class="image is-128x128">
+                  <img
+                    class="is-rounded"
+                    :src="require(`~/assets/images/${media.img}`)"
+                    :title="media.alt"
+                    :alt="media.alt"
+                    width="128"
+                    height="128"
+                  >
+                </p>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h4 class="has-text-primary">
+                    {{ media.title }}
+                  </h4>
+                  <p class="is-size-5 is-size-6-mobile" v-if="media.description">
+                    {{ media.description }}
+                  </p>
+                </div>
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -36,7 +40,7 @@ export default {
   name: 'SectionMediaObject',
   props: {
     media: {
-      type: Object,
+      type: Array,
       required: true,
       default: null
     }
