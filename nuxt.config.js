@@ -88,6 +88,7 @@ export default {
     // '@nuxtjs/bulma', // commented in order to avoid loads Bulma twice
     'nuxt-webfontloader',
     'nuxt-mq',
+    'vue-scrollto/nuxt',
     '@nuxtjs/robots',
     // IMP!: always declare the sitemap module at end of array
     '@nuxtjs/sitemap',
