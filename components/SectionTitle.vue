@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-small">
+  <section :id="`section-${id}`" class="hero is-small">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h4
@@ -24,6 +24,11 @@ export default {
       type: String,
       required: true,
       default: null
+    },
+    id: {
+      type: String,
+      default: null,
+      required: false
     }
   },
 }

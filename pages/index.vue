@@ -14,55 +14,38 @@
       <div class="hero-foot">
         <div class="container">
           <div class="level">
-            <div class="level-item has-text-centered">
+            <div
+              class="level-item has-text-centered"
+              v-for="(tip, index) in summaryTips"
+              :key="index"
+            >
               <div class="card mb-2">
-                <div class="card-bg-img is-mobile-apps"></div>
+                <div
+                  class="card-bg-img is-mobile-apps"
+                  v-if="$mq !== 'mobile' && $mq !== 'smartphone'"
+                ></div>
                 <div class="card-content">
                   <h3 class="subtitle is-size-5 is-size-6-mobile">
-                    <b class="has-text-primary">Comodísimo</b>
-                    <br class="is-hidden-touch" />
-                    porque te llevamos la comida a casa, la 
-                    <span class="has-text-weight-medium">cocinamos</span>,
-                    te <span class="has-text-weight-medium">servimos</span> y 
-                    <span class="has-text-weight-medium">limpiamos</span> después
-                    y sin cortes adicionales.
+                    <b class="has-text-primary">
+                      {{ tip.title }}
+                    </b>
+                    <br class="is-hidden-touch"/>
+                    <span v-html="tip.description"></span>
                   </h3>
                 </div>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div class="card mb-2">
-                <div class="card-bg-img is-mobile-marketing"></div>
-                <div class="card-content">
-                  <h3 class="subtitle is-size-5 is-size-6-mobile">
-                    <b class="has-text-primary">Todo ventajas</b>
-                    <br class="is-hidden-touch" />
-                    porque no necesitas salir de casa, tienes 
-                    <span class="has-text-weight-medium">chef y servicio en exclusiva</span>,
-                    sin las molestias de comprar, cocinar, fregar...
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div class="card mb-2">
-                <div class="card-bg-img is-online-world"></div>
-                <div class="card-content">
-                  <h3 class="subtitle is-size-5 is-size-6-mobile">
-                    <b class="has-text-primary">Variado y seguro</b>
-                    <br class="is-hidden-touch" />
-                    porque disponemos de un <span class="has-text-weight-medium">amplio menú</span>
-                    con arroces, carnes maduradas, marisco... Y con
-                    <span class="has-text-weight-medium">medidas anticovid-19</span> por tu seguridad.
-                  </h3>
-                </div>
-                <!-- <footer class="card-footer">
+                <footer class="card-footer">
                   <p class="card-footer-item">
                     <span>
-                      <a href="#">Saber más</a>
+                      <a
+                        href=""
+                        v-scroll-to="{ el: '#section-'+tip.link, offset: getOffset() }"
+                        :title="``"
+                      >
+                        <b>Saber más</b>
+                      </a>
                     </span>
                   </p>
-                </footer> -->
+                </footer>
               </div>
             </div>
           </div>
@@ -70,13 +53,13 @@
       </div>
     </section>
 
-    <SectionTitle :header="header.features" />
-    <SectionChessBoard :items="features" :page="$route.name"/>
+    <SectionTitle :header="header.features" :id="summaryTips[0].link" />
+    <SectionChessBoard :items="features" :page="$route.name" />
 
-    <SectionTitle :header="header.pros" />
-    <SectionMediaObject :media="pros" />
+    <SectionTitle :header="header.advantages" :id="summaryTips[1].link" />
+    <SectionMediaObject :media="advantages" />
 
-    <SectionTitle :header="header.menu" />
+    <SectionTitle :header="header.menu" :id="summaryTips[2].link" />
     <SectionMenu />
 
     <TheFooter />
@@ -90,14 +73,34 @@ export default {
       owner: this.$store.state.owner,
       header: {
         features: 'Es tan cómodo para ti...',
-        pros: 'Son todo ventajas',
+        advantages: 'Son todo ventajas',
         menu: 'Todo lo que te puedo ofrecer',
       },
+      summaryTips: [
+        {
+          title: 'Comodísimo',
+          description:
+            'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span> y  y sin cortes adicionales.',
+          link: 'confortable'
+        },
+        {
+          title: 'Todo ventajas',
+          description:
+            'porque no necesitas salir de casa, tienes <span class="has-text-weight-medium">chef y servicio en exclusiva</span>, sin las molestias de comprar, cocinar, fregar...',
+          link: 'advantages'
+        },
+        {
+          title: 'Variado y seguro',
+          description:
+            'porque disponemos de un <span class="has-text-weight-medium">amplio menú</span> con arroces, carnes maduradas, marisco... Y con <span class="has-text-weight-medium">medidas anticovid-19</span> por tu seguridad.',
+          link: 'safety'
+        },
+      ],
       features: [
         {
           title: '<small class="has-text-weight-light">...Porque</small> cocino en tu casa',
           description:
-            'Llegaré a tu casa con tiempo suficiente para cocinar el menú acordado previamente. Si eres fan de los fogones aprovecha para quedarte durante la preparación de los platos y así aprender de una cocinaera profesional.',
+            'Llegaré a tu casa con tiempo suficiente para cocinar el menú acordado previamente. Si eres fan de los fogones aprovecha para quedarte durante la preparación de los platos y así <b>aprender de una cocinera profesional</b>.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
@@ -110,7 +113,7 @@ export default {
         {
           title: '<small class="has-text-weight-light">...Porque</small> te sirvo a tu ritmo',
           description:
-            'Yo en persona me encargaré del servicio de mesa, explicándote los detalles de cada plato si así lo deseáis y al ritmo que cada comensal prefiera, sin prisas o con ellas. El servicio será discreto y profesional, para garantizar una velada cómoda y discreta.',
+            'Yo en persona me encargaré del <b>servicio de mesa</b>, explicándote los detalles de cada plato si así lo deseáis y al ritmo que cada comensal prefiera, sin prisas o con ellas. El servicio será discreto y profesional, para <b>garantizar una velada cómoda y discreta</b>.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
@@ -123,7 +126,7 @@ export default {
         {
           title: '<small class="has-text-weight-light">...Porque</small> te limpio la cocina',
           description:
-            'Y antes de irme limpiaré la cocina, la vajilla y los utensilios utilizados tanto en la elaboración como en la degustación del menú. Podrás disfrutar de una sobremesa sin prisas, sabiendo que liumpian por ti.',
+            'Y antes de irme <b>limpiaré la cocina</b>, la <b>vajilla</b> y los utensilios utilizados tanto en la elaboración como en la degustación del menú. Podrás disfrutar de una sobremesa sin prisas, sabiendo que <b>limpian por ti</b>.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
@@ -136,7 +139,7 @@ export default {
         {
           title: '<small class="has-text-weight-light">...Y</small> sin cortes adicionales',
           description:
-            'Sin tener que pagar extras de envío, o incremento por terraza... El precio no variará respecto al menú pactado previa cita. Además disponemos de ofertas expeciales para determinados gremios.',
+            '<b>Sin tener que pagar extras</b> de envío, o incremento por terraza... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas expeciales</b> para determinados gremios.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
@@ -147,7 +150,7 @@ export default {
           reflected: true
         }
       ],
-      pros: [
+      advantages: [
         {
           title: '¡Es comodísimo!',
           description:
@@ -222,6 +225,15 @@ export default {
         { rel: 'alternate', hid: 'alternate', href: canonicalDev },
       ]
     }
+  },
+  methods: {
+    getOffset() {
+      let mq = this.$mq
+      if (mq === 'mobile' || mq === 'smartphone' || mq === 'tablet') {
+        return 0 // layout without top navbar (small screens)
+      }
+      return -53 // layout with top navbar (big screens)
+    },
   }
 }
 </script>

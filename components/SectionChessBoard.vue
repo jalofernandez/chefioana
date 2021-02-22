@@ -77,13 +77,13 @@ export default {
     items: {
       type: Array,
       default: null,
-      required: true,
+      required: true
     },
     page: {
       type: String,
       default: null,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
