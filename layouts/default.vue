@@ -46,11 +46,11 @@
     <div :class="['aside-navbar-menu', { 'is-open': isMenuShown }, 'has-text-centered']">
       <div class="aside-logo">
         <img
-          :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
+          :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
           :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
           :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          width="66"
-          height="50"
+          width="125"
+          height="155"
         >
       </div>
       <ul class="aside-nav-list" @click="isMenuShown = false">
