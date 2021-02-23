@@ -97,7 +97,8 @@ export default {
   webfontloader: {
     google: {
       families: [
-        'Akaya+Telivigala&display=swap', // titles
+        // 'Akaya+Telivigala&display=swap', // titles
+        'Bree+Serif&display=swap', // titles
         'Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap', // descriptions
         // 'Roboto+Slab:wght@100;300;400;600&display=swap' // descriptions
       ]
