@@ -5,9 +5,13 @@
 // custom vars
 $fucsia: #fc363a // brand main color -> RED as Ioana´s chef clothes
 $color-main: $fucsia
+// $color-lighter: #ffcdbb
+$color-lighter: #ddd
 $black-bis: hsl(0, 0%, 7%)
-$color-bg-opacity: rgba(white,.6)
 $backdrop: saturate(180%) blur(5px) // in modern browsers only
+
+@mixin color-bg-opacity($color, $opacity)
+  background-color: rgba($color,$opacity)
 
 $primary: $color-main
 $has-text-primary: $color-main

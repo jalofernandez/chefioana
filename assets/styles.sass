@@ -48,8 +48,7 @@ body, button, input, optgroup, select, textarea
 // NAVBARS & item links
 .navbar
   &.top-bar
-    // border-bottom: 1px solid darken($fucsia, 5%)
-    background-color: $color-bg-opacity
+    @include color-bg-opacity(white,.6)
     backdrop-filter: $backdrop
     .level
       width: 100%
@@ -59,16 +58,16 @@ body, button, input, optgroup, select, textarea
       &.is-active
         color: $color-main
   &.bottom-bar
-    // box-shadow: 0px 5px 2px #ccc, 0px -3px 10px #ccc
     background-color: transparent
     .navbar-brand
       justify-content: space-between
       align-items: center
-      margin: 0 1rem 1rem 1rem
-      background-color: rgba(white,.6)
+      margin: 0 1.5rem 1.5rem 1.25rem
+      @include color-bg-opacity($color-lighter,.33)
       backdrop-filter: saturate(180%) blur(5px)
-      box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
       border-radius: 50px
+      border: 1px solid white
       .whatsapp .image
         padding: .25rem
         margin-right: .33rem
@@ -180,13 +179,45 @@ body, button, input, optgroup, select, textarea
       top: calc(50% + 10px)
   &.is-active, &.is-active:hover
     span
-      color: orange
+      color: red
       &:nth-child(1), &:nth-child(3)
         width: 26px
       &:nth-child(1)
-        transform: translateY(7px) rotate(45deg)
+        transform: translateY(10px) rotate(45deg)
       &:nth-child(3)
-        transform: translateY(-9px) rotate(-45deg)
+        transform: translateY(-12px) rotate(-45deg)
+
+.aside-navbar-menu
+  position: fixed
+  top: 0
+  left: -260px
+  z-index: 29 // less than mobile´s aside nav menu
+  width: 260px
+  height: 100%
+  @include color-bg-opacity(white,.8)
+  backdrop-filter: $backdrop
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+  overflow-y: auto
+  will-change: left
+  opacity: 0
+  transition: all 0.5s
+  visibility: hidden
+  &.is-open
+    opacity: 1
+    visibility: visible
+    transform: translateX(260px)
+  .navbar-item
+    font-size: 1.2rem
+    letter-spacing: .02rem
+  .navbar-item.nuxt-link-exact-active
+    font-weight: bold
+  .navbar-item.sitemap
+      display: none
+  @media (min-width: 1024px)
+    display: none
+
+.aside-logo
+  padding: .5rem
 
 .index
   .media
