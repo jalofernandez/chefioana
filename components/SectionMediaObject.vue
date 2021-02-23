@@ -6,14 +6,14 @@
           <div class="column is-6" v-for="media in media" :key="media.title">
             <article class="media mb-4">
               <figure class="media-left mr-4">
-                <p class="image is-128x128">
+                <p :class="`image is-${getImgSize()}x${getImgSize()}`">
                   <img
                     class="is-rounded"
                     :src="require(`~/assets/images/${media.img}`)"
                     :title="media.alt"
                     :alt="media.alt"
-                    width="128"
-                    height="128"
+                    :width="getImgSize()"
+                    :height="getImgSize()"
                   >
                 </p>
               </figure>
@@ -53,5 +53,14 @@ export default {
       default: null
     }
   },
+  methods: {
+    getImgSize() {
+      let mq = this.$mq
+      if (mq === 'mobile' || mq === 'smartphone') {
+        return 96 // (small screens)
+      }
+      return 128 // (big screens)
+    },
+  }
 }
 </script>
