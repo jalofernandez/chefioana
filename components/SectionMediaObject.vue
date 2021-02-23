@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <div class="columns is-vcentered is-flex-wrap-wrap content is-medium">
+        <div class="columns is-flex-wrap-wrap content is-medium">
           <div class="column is-6" v-for="media in media" :key="media.title">
             <article class="media mb-4">
               <figure class="media-left mr-4">
@@ -30,9 +30,11 @@
                   >
                     {{ media.title }}
                   </h4>
-                  <p class="is-size-5 is-size-6-mobile" v-if="media.description">
-                    {{ media.description }}
-                  </p>
+                  <p
+                    class="is-size-5 is-size-6-mobile"
+                    v-html="media.description"
+                    v-if="media.description"
+                  ></p>
                 </div>
               </div>
             </article>

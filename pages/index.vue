@@ -154,35 +154,35 @@ export default {
         {
           title: '¡Es comodísimo!',
           description:
-            'No necesitas salir de casa ni coger el coche, aguantar el tráfico, tener que dar vueltas para aparcar o pagar parking, la pereza de que haga mal tiempo...',
+            '<span class="has-text-weight-medium">No necesitas salir de casa</span> ni coger el coche, aguantar el tráfico, tener que dar vueltas para aparcar o pagar parking, la pereza de que haga mal tiempo...',
           img: '128x128.png',
           alt: '¡Es comodísimo!'
         },
         {
           title: '¡Es exclusivo!',
           description:
-            'Tienes al cocinero / camarero en exclusiva para ti y tus comensales sin tiempos de espera, ni guardar cola y al ritmo que tú marques.',
+            'Tienes al <span class="has-text-weight-medium">cocinero y camarero en exclusiva</span> para ti y tus comensales sin tiempos de espera, ni guardar cola y al ritmo que tú marques.',
           img: '128x128.png',
           alt: '¡Es exclusivo!'
         },
         {
           title: '¡Sin molestias!',
           description:
-            'Tener que hacer la compra, cocinar, fregar...',
+            '<span class="has-text-weight-medium">Nada de</span> tener que <span class="has-text-weight-medium">hacer la compra</span> antes, <span class="has-text-weight-medium">cocinar</span>, <span class="has-text-weight-medium">servir</span> mientras los demas disfrutan ya de la cena, <span class="has-text-weight-medium">fregar</span> o poner lavavajillas y retirar tras la velada...',
           img: '128x128.png',
           alt: '¡Es molestias!'
         },
         {
           title: '¡El mismo precio!',
           description:
-            'Te cuesta igual que en La Antigua Bodeguita, sin costes adicionales de trasporte, incremento por terraza...',
+            'Te cuesta igual que en la <a href="https://haztunegociodigital.com/horeca/la-antigua-bodeguita" class="has-text-weight-medium has-underline" title="Ver menu de La Antigua Bodeguita" target="_blank" rel="noopener noreferrer">La Antigua Bodeguita</a>, <span class="has-text-weight-medium">sin costes adicionales</span> de trasporte, incremento por terraza...',
           img: '128x128.png',
           alt: '¡Es mismo precio!'
         },
         {
           title: '¡Con quien tú quieras!',
           description:
-            'Niños y mascotas permitidas.',
+            '<span class="has-text-weight-medium">Niños y mascotas permitidas</span>. Como es tu casa el derecho de admisión lo pones tú 😁',
           img: '128x128.png',
           alt: '¡Con quien tú quieras!'
         },
