@@ -13,7 +13,7 @@
       </div>
       <div class="hero-foot">
         <div class="container">
-          <div class="level">
+          <div class="level is-justify-content-space-around">
             <div
               class="level-item has-text-centered"
               v-for="(tip, index) in summaryTips"
@@ -60,7 +60,7 @@
     <SectionMediaObject :media="advantages" />
 
     <SectionTitle :header="header.menu" :id="summaryTips[2].link" />
-    <SectionMenu />
+    <SectionMenuExample />
 
     <TheFooter />
   </main>
@@ -72,9 +72,9 @@ export default {
     return {
       owner: this.$store.state.owner,
       header: {
-        features: 'Es tan cómodo para ti...',
+        features: 'Un chef en casa es tan cómodo porque...',
         advantages: 'Son todo ventajas',
-        menu: 'Todo lo que te puedo ofrecer',
+        menu: '¿Quieres un menú de chef como este?',
       },
       summaryTips: [
         {
@@ -98,7 +98,7 @@ export default {
       ],
       features: [
         {
-          title: '<small class="has-text-weight-light">...Porque</small> cocino en tu casa',
+          title: '...Cocino en tu casa',
           description:
             'Llegaré a tu casa con tiempo suficiente para cocinar el menú acordado previamente. Si eres fan de los fogones aprovecha para quedarte durante la preparación de los platos y así <b>aprender de una cocinera profesional</b>.',
           link: 'Reservar en el',
@@ -111,7 +111,7 @@ export default {
           reflected: false
         },
         {
-          title: '<small class="has-text-weight-light">...Porque</small> te sirvo a tu ritmo',
+          title: '...Realizo el servicio a tu ritmo',
           description:
             'Yo en persona me encargaré del <b>servicio de mesa</b>, explicándote los detalles de cada plato si así lo deseáis y al ritmo que cada comensal prefiera, sin prisas o con ellas. El servicio será discreto y profesional, para <b>garantizar una velada cómoda y discreta</b>.',
           link: 'Reservar en el',
@@ -124,7 +124,7 @@ export default {
           reflected: true
         },
         {
-          title: '<small class="has-text-weight-light">...Porque</small> te limpio la cocina',
+          title: '...Recojo y limpio la cocina',
           description:
             'Y antes de irme <b>limpiaré la cocina</b>, la <b>vajilla</b> y los utensilios utilizados tanto en la elaboración como en la degustación del menú. Podrás disfrutar de una sobremesa sin prisas, sabiendo que <b>limpian por ti</b>.',
           link: 'Reservar en el',
@@ -137,9 +137,9 @@ export default {
           reflected: false
         },
         {
-          title: '<small class="has-text-weight-light">...Y</small> sin costes adicionales',
+          title: '...No te costará más',
           description:
-            '<b>Sin tener que pagar extras</b> de envío, o incremento por terraza... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas expeciales</b> para determinados gremios.',
+            '<b>Sin tener que pagar extras</b> de envío, incremento por terraza ni costes adicionales... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas expeciales</b> para determinados gremios.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {

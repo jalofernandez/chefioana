@@ -8,7 +8,7 @@
       v-if="$mq !== 'mobile' && $mq !== 'smartphone' && $mq !== 'tablet'"
     >
       <div class="container">
-        <nav class="level is-align-items-center">
+        <nav class="level is-align-items-center is-justify-content-space-around">
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[0]" :offset="-120" />
           </p>
@@ -79,7 +79,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="has-text-success has-text-weight-medium">WhatsApp</span>
+          <span class="has-text-success has-text-weight-bold">WhatsApp</span>
         </a>
       </ul>
     </div>

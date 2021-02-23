@@ -19,8 +19,8 @@
                 <article class="tile is-child notification is-info">
                   <p class="title">Middle tile</p>
                   <p class="subtitle">With an image</p>
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  <figure class="image is-16by9">
+                    <img src="~/assets/images/640x360.png">
                   </figure>
                 </article>
               </div>

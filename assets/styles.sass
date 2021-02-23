@@ -80,9 +80,10 @@ body, button, input, optgroup, select, textarea
 .level
   align-items: flex-start
   .card
-    width: 250px
+    width: 290px
+    @media (min-width: 769px) and (max-width: 1023px)
+      width: 250px
     @media (max-width: 768px)
-      // width: 275px
       width: calc(100% - 2rem)
 
 .card-bg-img
@@ -208,6 +209,9 @@ body, button, input, optgroup, select, textarea
     padding: .75rem
     font-size: 1.2rem
     letter-spacing: .02rem
+    &.is-active .navbar-item
+      font-weight: 500!important
+      opacity: .5
   .navbar-item.nuxt-link-exact-active
     font-weight: bold
   .navbar-item.sitemap
