@@ -10,10 +10,10 @@
       <div class="container">
         <nav class="level is-align-items-center">
           <p class="level-item has-text-centered">
-            <NavbarItem :link="links[0]" :offset="-120" />
+            <ItemNavbar :link="links[0]" :offset="-120" />
           </p>
           <p class="level-item has-text-centered">
-            <NavbarItem :link="links[1]" :offset="getOffset()" />
+            <ItemNavbar :link="links[1]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered navbar-brand">
             <NuxtLink
@@ -31,14 +31,15 @@
             </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
-            <NavbarItem :link="links[2]" :offset="getOffset()" />
+            <ItemNavbar :link="links[2]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered">
-            <NavbarItem :link="links[3]" :offset="getOffset()" />
+            <ItemNavbar :link="links[3]" :offset="getOffset()" />
           </p>
         </nav>
       </div>
     </nav>
+    <!-- all Pages content -->
     <transition name="chefioana-transition" appear>
       <Nuxt />
     </transition>
@@ -60,8 +61,8 @@
           :key="index"
           @click="toggleClick(index)"
         >
-          <!-- <NavbarItem :link="links[0]" :offset="getOffset()" /> -->
-          <NavbarItem class="has-text-weight-medium" :link="link" :offset="getOffset()" />
+          <!-- <ItemNavbar :link="links[0]" :offset="getOffset()" /> -->
+          <ItemNavbar class="has-text-weight-medium" :link="link" :offset="getOffset()" />
         </li>
         
         <a

@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'NavbarItem',
+  name: 'ItemNavbar',
   props: {
     link: {
       type: Object,

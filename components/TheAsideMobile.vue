@@ -18,7 +18,7 @@
       >
         Chef en casa
       </NuxtLink> -->
-      <NavbarItem :link="links[0]" />
+      <ItemNavbar :link="links[0]" />
       <a
         class="navbar-item phone" 
         :href="`tel:${owner.phone}`"
