@@ -15,6 +15,9 @@
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[1]" :offset="getOffset()" />
           </p>
+          <p class="level-item has-text-centered">
+            <ItemNavbar :link="links[2]" :offset="getOffset()" />
+          </p>
           <p class="level-item has-text-centered navbar-brand">
             <NuxtLink
               class="navbar-item has-logo"
@@ -31,10 +34,13 @@
             </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[2]" :offset="getOffset()" />
+            <ItemNavbar :link="links[3]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[3]" :offset="getOffset()" />
+            <ItemNavbar :link="links[4]" :offset="getOffset()" />
+          </p>
+          <p class="level-item has-text-centered">
+            <ItemNavbar :link="links[5]" :offset="getOffset()" />
           </p>
         </nav>
       </div>
@@ -64,7 +70,6 @@
           <!-- <ItemNavbar :link="links[0]" :offset="getOffset()" /> -->
           <ItemNavbar class="has-text-weight-medium" :link="link" :offset="getOffset()" />
         </li>
-        
         <a
           class="navbar-item phone" 
           :href="`tel:${owner.phone}`"

@@ -53,14 +53,17 @@
       </div>
     </section>
 
-    <SectionTitle :header="header.features" :id="summaryTips[0].link" />
+    <SectionTitle :header="header.features" :id="links[1].section" />
     <SectionChessBoard :items="features" :page="$route.name" />
 
-    <SectionTitle :header="header.advantages" :id="summaryTips[1].link" />
+    <SectionTitle :header="header.advantages" :id="links[3].section" />
     <SectionMediaObject :media="advantages" />
 
-    <SectionTitle :header="header.menu" :id="summaryTips[2].link" />
+    <SectionTitle :header="header.menu" :id="links[2].section" />
     <SectionMenuExample />
+
+    <SectionTitle :header="header.discounts" :id="links[4].section" />
+    <SectionMediaObject :media="discounts" />
 
     <TheFooter />
   </main>
@@ -71,29 +74,31 @@ export default {
   data() {
     return {
       owner: this.$store.state.owner,
+      links: this.$store.state.pages.links,
       header: {
         features: 'Un chef en casa es tan cómodo porque...',
         advantages: 'Son todo ventajas',
         menu: '¿Quieres un menú de chef como este?',
+        discounts: 'Descuentos y ofertas'
       },
       summaryTips: [
         {
           title: 'Comodísimo',
           description:
             'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span> y  y sin costes adicionales.',
-          link: 'confortable'
+          link: this.$store.state.pages.links[1].section
         },
         {
           title: 'Todo ventajas',
           description:
             'porque no necesitas salir de casa, tienes <span class="has-text-weight-medium">chef y servicio en exclusiva</span>, sin las molestias de comprar, cocinar, fregar...',
-          link: 'advantages'
+          link: this.$store.state.pages.links[3].section
         },
         {
           title: 'Variado y seguro',
           description:
             'porque disponemos de un <span class="has-text-weight-medium">amplio menú</span> con arroces, carnes maduradas, marisco... Y con <span class="has-text-weight-medium">medidas anticovid-19</span> por tu seguridad.',
-          link: 'safety'
+          link: this.$store.state.pages.links[2].section
         },
       ],
       features: [
@@ -186,6 +191,36 @@ export default {
           img: '128x128.png',
           alt: '¡Con quien tú quieras!'
         },
+      ],
+      discounts: [
+        {
+          title: 'Gremios',
+          description:
+            '<b>20% de descuento</b> a <span class="has-text-weight-medium">fuerzas y cuerpos de seguridad del estado</span> como guardia civil, CNP, policía municipal y local, UME...) así como sanitarios, médicos y enfermeros, bomberos...',
+          img: '128x128.png',
+          alt: 'Descuentos del 20% a los gremios de sanidad y cuerpos de seguridad del estado.'
+        },
+        {
+          title: 'Funcionarios',
+          description:
+            '<b>20% de descuento</b> a todos los <span class="has-text-weight-medium">funcionarios</span> del excelentísimo <span class="has-text-weight-medium">ayuntamiento de Valdemoro</span>.',
+          img: '128x128.png',
+          alt: 'Descuentos del 20% a funcionarios del ayto de Valdemoro.'
+        },
+        {
+          title: 'Ofertas especiales',
+          description:
+            'Dispongo de gran variedad de <b>ofertas y descuentos</b> en <span class="has-text-weight-medium">productos de temporada</span> o <span class="has-text-weight-medium">menús especiales</span>. Preguntar disponibilidad y precios.',
+          img: '128x128.png',
+          alt: 'Consultar Ofertas especiales de temporada'
+        },
+        {
+          title: 'Fidelización',
+          description:
+            'Al pedir 5 arroces en menos de 5 meses el <span class="has-text-weight-medium">6º es</span> <b>gratis</b>. <br/>¡Casi nada! 👍',
+          img: '128x128.png',
+          alt: 'Tras 5 arroces en menos de 5 meses el 6º gratis'
+        }
       ]
     }
   },
