@@ -56,8 +56,8 @@
           :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
           :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
           :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          width="125"
-          height="155"
+          width="100"
+          height="124"
         >
       </div>
       <ul class="aside-nav-list" @click="isMenuShown = false">

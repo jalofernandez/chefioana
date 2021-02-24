@@ -61,11 +61,11 @@ body, button, input, optgroup, select, textarea
       justify-content: space-between
       align-items: center
       margin: 0 1.5rem 1.5rem 1.25rem
-      @include color-bg-opacity($color-lighter,.33)
+      @include color-bg-opacity($color-lighter,.5)
       backdrop-filter: saturate(180%) blur(5px)
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-      border-radius: 50px
       border: 1px solid white
+      border-radius: 50px
       .whatsapp .image
         padding: .25rem
         margin-right: .33rem
@@ -192,10 +192,17 @@ body, button, input, optgroup, select, textarea
   left: -260px
   z-index: 29 // less than mobile´s aside nav menu
   width: 260px
-  height: 100%
-  @include color-bg-opacity(white,.8)
+  height: 100vh
+  @include color-bg-opacity($color-lighter,.8)
   backdrop-filter: $backdrop
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+  border-right: 1px solid white
+  // Glasmorphism effect generated with: https://glassmorphism.com/
+  // background: rgba( 252, 54, 58, 0.10 )
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+  // backdrop-filter: blur( 7.5px )
+  // -webkit-backdrop-filter: blur( 7.5px )
+  // border: 1px solid rgba( 255, 255, 255, 0.18 )
   overflow-y: auto
   will-change: left
   opacity: 0
@@ -206,7 +213,7 @@ body, button, input, optgroup, select, textarea
     visibility: visible
     transform: translateX(260px)
   .navbar-item
-    padding: .75rem
+    padding: .5rem
     font-size: 1.2rem
     letter-spacing: .02rem
     &.is-active .navbar-item
