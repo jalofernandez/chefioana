@@ -5,7 +5,7 @@
         <div class="tile is-ancestor">
           <div class="tile is-vertical">
             <div class="tile">
-              <div class="tile is-parent is-vertical">
+              <div class="tile is-parent is-vertical reflected">
                 <ItemMenuExample :dish="dishes.tapas" :order="1" />
               </div>
               <div class="tile is-parent">
@@ -34,12 +34,12 @@
               <div class="tile is-parent is-vertical">
                 <ItemMenuExample :dish="dishes.mains.items[0]" />
               </div>
-              <div class="tile is-parent">
+              <div class="tile is-parent reflected">
                 <ItemMenuExample :dish="dishes.mains.items[1]" />
               </div>
             </div>
             <div class="tile">
-              <div class="tile is-parent is-vertical">
+              <div class="tile is-parent is-vertical reflected">
                 <ItemMenuExample :dish="dishes.dessert" :order="4" />
               </div>
               <div class="tile is-parent">
@@ -69,7 +69,7 @@ export default {
           name: 'Primer plato',
           description:
             '<b>Tataki</b> de <span class="has-text-weight-medium">atún</span> rojo con <span class="has-text-weight-medium">sésamo</span> negro y salsa <span class="has-text-weight-medium">teriyaki</span>.',
-          src: 'chefioana-video-menu-tapas'
+          src: 'chefioana-video-menu-tataki'
         },
         mains: {
           name: 'Segundos platos',
@@ -82,7 +82,7 @@ export default {
             {
               description:
                 '<b>Rabo de toro</b> al <span class="has-text-weight-medium">estilo tradicional cordobés</span>4 con su estofado de verduras frescas de la huerta y su vino de rivera.',
-              src: 'chefioana-video-menu-tapas'
+              src: 'chefioana-video-menu-rabo-de-toro'
             }
           ]
         },
