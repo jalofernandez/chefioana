@@ -70,22 +70,48 @@
           <!-- <ItemNavbar :link="links[0]" :offset="getOffset()" /> -->
           <ItemNavbar class="has-text-weight-medium" :link="link" :offset="getOffset()" />
         </li>
-        <a
-          class="navbar-item phone" 
-          :href="`tel:${owner.phone}`"
-          :title="`Llamar a ${owner.copyright}`"
-        >
-          <span class="has-text-primary has-text-weight-medium">644 09 34 70</span>
-        </a>
-        <a
-          class="navbar-item whatsapp"
-          :href="`https://wa.me/34${owner.phone}`"
-          :title="`Llamar o escribir al WhatsApp ${owner.phone} de ${owner.copyright}`"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="has-text-success has-text-weight-bold">WhatsApp</span>
-        </a>
+        <li>
+          <a
+            class="navbar-item phone is-flex is-justify-content-center" 
+            :href="`tel:${owner.phone}`"
+            :title="`Llamar a ${owner.copyright}`"
+          >
+            <figure class="image is-24x24px">
+              <img
+                src="~/assets/images/icons/phone-in-talk.svg"
+                title="Icono de llamada por teléfono"
+                alt="Icono de llamada por teléfono"
+                width="24"
+                height="24"
+              >
+            </figure>
+            <span class="has-text-primary has-text-weight-medium ml-2">
+              644 09 34 70
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="navbar-item whatsapp is-flex is-justify-content-center" 
+            :href="`https://wa.me/34${owner.phone}`"
+            :title="`Llamar o escribir al WhatsApp ${owner.phone} de ${owner.copyright}`"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <figure class="image is-24x24px">
+              <img
+                src="~/assets/images/icons/whatsapp.svg"
+                title="Icono de WhatsApp"
+                alt="Icono de WhatsApp"
+                width="24"
+                height="24"
+              >
+            </figure>
+            <span class="has-text-success has-text-weight-bold ml-2">
+              WhatsApp
+            </span>
+          </a>
+        </li>
       </ul>
     </div>
     <!-- bottom Navbar (small screen devices only) -->

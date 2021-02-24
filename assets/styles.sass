@@ -27,6 +27,12 @@ html
 body, button, input, optgroup, select, textarea
   font-family: $font-main
 
+ul, ol,
+.content ul, .content ol
+  margin: 0
+  padding: 0
+  list-style: none
+
 .is-title, .title
   font-family: $font-title
   &.has-text-weight-bold
@@ -251,6 +257,11 @@ body, button, input, optgroup, select, textarea
 
 .aside-logo
   padding: .5rem
+
+.footer
+  ul li
+    margin: .25rem
+    opacity: .5
 
 .index
   .media

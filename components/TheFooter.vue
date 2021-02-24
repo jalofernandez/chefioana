@@ -14,7 +14,7 @@
           >
         </picture>
       </div> -->
-      <div class="content has-text-centered">
+      <div class="has-text-centered">
         <div class="control level-item">
           <NuxtLink to="/">
             <div class="tags are-medium has-addons">
@@ -53,14 +53,19 @@
           <small class="has-text-grey-dark">Tecnología utilizada:</small>
         </div>
         <div class="control level-item">
-          <span
-            class="icon is-medium"
-            :title="item"
-            v-for="(item, index) in tech"
-            :key="index"
-          >
-            <span :class="`mdi mdi-24px mdi-${item}`"></span>
-          </span>
+          <ul class="is-flex">
+            <li v-for="(item, index) in tech" :key="index">
+              <figure class="image is-24x24px">
+                <img
+                  :src="require(`~/assets/images/tech/${item}.svg`)"
+                  :title="`Icono de ${item}`"
+                  :alt="`Icono de ${item}`"
+                  width="24"
+                  height="24"
+                >
+              </figure>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
