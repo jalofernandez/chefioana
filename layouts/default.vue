@@ -10,10 +10,10 @@
       <div class="container">
         <nav class="level is-align-items-center is-justify-content-space-around">
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[0]" :offset="-120" />
+            <ItemNavbar :link="links[1]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[1]" :offset="getOffset()" />
+            <ItemNavbar :link="links[3]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[2]" :offset="getOffset()" />
@@ -34,13 +34,13 @@
             </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[3]" :offset="getOffset()" />
-          </p>
-          <p class="level-item has-text-centered">
             <ItemNavbar :link="links[4]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[5]" :offset="getOffset()" />
+          </p>
+          <p class="level-item has-text-centered">
+            <ItemNavbar :link="links[6]" :offset="getOffset()" />
           </p>
         </nav>
       </div>

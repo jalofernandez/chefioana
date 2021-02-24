@@ -35,6 +35,22 @@ body, button, input, optgroup, select, textarea
 .has-underline
   text-decoration: underline
 
+.has-hover-underline
+  @media (hover: hover)
+    &:hover, &:focus
+      text-decoration: underline
+
+.author
+  &.jalofernandez
+    color: $jalofernandez
+  &.haztunegociodigital
+    color: $haztunegociodigital
+  @media (hover: hover)
+    &:hover, &:focus
+      span:not(.has-text-grey-darker),
+      small:not(.has-text-grey-darker)
+        text-decoration: underline
+
 .has-logo
   padding-top: .25rem
   padding-bottom: .25rem
@@ -52,7 +68,7 @@ body, button, input, optgroup, select, textarea
       width: 100%
     .navbar-item
       font-family: $font-title
-      font-size: 1.33rem
+      font-size: 1.1rem
       &.is-active
         color: $color-main
   &.bottom-bar
@@ -148,7 +164,14 @@ body, button, input, optgroup, select, textarea
   @media (max-width: 768px) and (min-width: 600px)
     margin-bottom: 1.5rem
   @media (max-width: 599px)
-    margin-bottom: 0
+    margin-bottom: 04
+
+.content blockquote
+    background-color: $color-lighter
+    border-left: none
+    border-radius: 5px
+    @media (max-width: 600px)
+      padding: 1em 1.25em
 
 // mobile´s ASIDE navigation Menu
 .navbar-burger

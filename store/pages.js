@@ -5,6 +5,7 @@ export const state = () => ({
     { name: "Menú", section: "menu" },
     { name: "Ventajas", section: "advantages" },
     { name: "Ofertas", section: "discounts" },
-    { name: "Seguridad", section: "safety" }
+    { name: "Seguridad", section: "safety" },
+    { name: "Sobre Ioana", section: "about" }
   ]
 })

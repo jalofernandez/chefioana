@@ -3,6 +3,7 @@ const alias = 'chefioana'
 const business = nickname + ' en tu casa'
 const url = 'ioanachefentucasa.com'
 const email = alias + '@gmail.com'
+const partner = 'haztunegociodigital'
 
 export const state = () => ({
   name: 'Ioana Botis',
@@ -15,7 +16,9 @@ export const state = () => ({
   author: 'jalofernandez',
   currentYear: new Date().getFullYear(),
   version: '1.0.0',
-  partner: 'haztunegociodigital',
+  partner: partner,
+  laAntiguaBodeguita:
+    '<a href="https://'+partner+'.com/horeca/la-antigua-bodeguita" class="has-text-weight-medium has-text-warning has-underline" title="Ver menu de La Antigua Bodeguita" target="_blank" rel="noopener noreferrer">La Antigua Bodeguita</a>',
   schema: {
     '@context': 'http://schema.org',
     '@type': 'LocalBusiness',
