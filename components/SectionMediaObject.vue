@@ -8,7 +8,6 @@
               <figure class="media-left mr-4">
                 <p :class="`image is-${getImgSize()}x${getImgSize()}`">
                   <img
-                    class="is-rounded"
                     :src="require(`~/assets/images/${media.img}`)"
                     :title="media.alt"
                     :alt="media.alt"
