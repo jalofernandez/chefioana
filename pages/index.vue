@@ -1,8 +1,18 @@
 <template>
   <main :class="$route.name">
-    <section class="hero is-fullheight mb-6">
+    <section class="hero is-fullheight video mb-6">
+      <div class="hero-video">
+        <video
+          class="hero-video has-aspect-ratio is-16by9"
+          :poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
+          :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
+          playsinline autoplay muted loop
+        >
+          <source src="~/assets/videos/chefioana-video-menu-postre.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-body">
-        <div class="container has-text-centered">
+        <div class="container">
           <h1 id="section-intro" class="title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
             <b class="has-text-primary">Chef</b> Ioana <b class="has-text-primary">en casa</b>
           </h1>

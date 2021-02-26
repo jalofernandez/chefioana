@@ -121,8 +121,14 @@ ul, ol,
   padding-top: 0
 
 .card-content
+  @include color-bg-opacity($color-lighter,.75)
+  backdrop-filter: $backdrop
   @media (max-width: 768px)
     padding: 1rem
+
+@media screen and (max-width: 768px)
+  .hero-video
+    display: initial!important
 
 @media (min-width: 980px)
   .reflected .columns .column:first-child
