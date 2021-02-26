@@ -236,29 +236,29 @@ export default {
         {
           title: 'Gremios',
           description:
-            '<b>20% de descuento</b> a <span class="has-text-weight-medium">fuerzas y cuerpos de seguridad del estado</span> como guardia civil, CNP, policía municipal y local, UME...) así como sanitarios, médicos y enfermeros, bomberos...',
-          img: '128x128.png',
+            '<b>20% de descuento</b> a <span class="has-text-weight-medium">fuerzas y cuerpos de seguridad del estado</span> como guardia civil, CNP, policía municipal y local, UME... Así como <span class="has-text-weight-medium">sanitarios</span>, médicos y enfermeros, <span class="has-text-weight-medium">bomberos</span>...',
+          img: 'icons/chefioana-icon--seguridad.svg',
           alt: 'Descuentos del 20% a los gremios de sanidad y cuerpos de seguridad del estado.'
         },
         {
           title: 'Funcionarios',
           description:
             '<b>20% de descuento</b> a todos los <span class="has-text-weight-medium">funcionarios</span> del excelentísimo <span class="has-text-weight-medium">ayuntamiento de Valdemoro</span>.',
-          img: '128x128.png',
+          img: 'icons/chefioana-icon--ayuntamiento.svg',
           alt: 'Descuentos del 20% a funcionarios del ayto de Valdemoro.'
         },
         {
           title: 'Ofertas especiales',
           description:
             'Dispongo de gran variedad de <b>ofertas y descuentos</b> en <span class="has-text-weight-medium">productos de temporada</span> o <span class="has-text-weight-medium">menús especiales</span>. Preguntar disponibilidad y precios.',
-          img: '128x128.png',
+          img: 'icons/chefioana-icon--ofertas.svg',
           alt: 'Consultar Ofertas especiales de temporada'
         },
         {
           title: 'Fidelización',
           description:
             'Al pedir 5 arroces en menos de 5 meses el <span class="has-text-weight-medium">6º es</span> <b>gratis</b>. <br/>¡Casi nada! 👍',
-          img: '128x128.png',
+          img: 'icons/chefioana-icon--paellas.svg',
           alt: 'Tras 5 arroces en menos de 5 meses el 6º gratis'
         }
       ],
