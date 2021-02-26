@@ -89,13 +89,13 @@ export default {
         dessert: {
           name: 'Postre',
           description:
-            '<b>Postre casero</b> de <span class="has-text-weight-medium">nata</span> con <span class="has-text-weight-medium">caramelo</span> y...',
-          src: 'chefioana-video-menu-tapas'
+            '<b>Postre casero</b> dulce de <span class="has-text-weight-medium">3 chocolates</span>, <span class="has-text-weight-medium">nata</span> y <span class="has-text-weight-medium">caramelo</span>. Un auténtico placer como broche final.',
+          src: 'chefioana-video-menu-postre'
         },
         clean: {
           name: 'Limpieza',
           description:
-            'De limpieza cantidubi dubida...',
+            'Tras finalizar el servicio y la degustación, mientras los comensales están de sobremesa, yo <b>recojo y limpio</b>.',
           src: 'chefioana-video-menu-limpieza'
         }
       }
