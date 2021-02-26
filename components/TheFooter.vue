@@ -15,6 +15,31 @@
         </picture>
       </div> -->
       <div class="has-text-centered">
+        <div class="control level-item mb-6">
+          <NuxtLink
+            to="/"
+            class="has-underline has-text-dark has-text-weight-medium"
+            :title="`Ir a la página de inicio de ${owner.copyright}`"
+          >
+            <span>Inicio</span>
+          </NuxtLink>
+          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <NuxtLink
+            to="/"
+            class="has-underline has-text-dark has-text-weight-medium"
+            :title="`Ir a la página de términos legales de ${owner.copyright}`"
+          >
+            <span>Legal</span>
+          </NuxtLink>
+          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <NuxtLink
+            to="/"
+            class="has-underline has-text-dark has-text-weight-medium"
+            :title="`Ir a la página del mapa del sitio web de ${owner.copyright}`"
+          >
+            <span>Sitemap</span>
+          </NuxtLink>
+        </div>
         <div class="control level-item">
           <NuxtLink to="/">
             <div class="tags are-medium has-addons">
@@ -67,6 +92,12 @@
             </li>
           </ul>
         </div>
+        <div class="control level-item content is-small mt-4">
+          <span class="ml-2">© Todos los derechos reservados</span>,
+          <b>
+            <small class="ml-1">{{ currentYear }}</small>
+          </b>
+        </div>
       </div>
     </div>
   </footer>
@@ -78,6 +109,7 @@ export default {
   data() {
     return {
       owner: this.$store.state.owner,
+      currentYear: new Date().getFullYear(),
       developBy: 'Website diseñado y desarrollado por',
       partnership: [
         { name: 'Protectora AiBa Madrid', url: 'http://www.aibamadrid.com' },
