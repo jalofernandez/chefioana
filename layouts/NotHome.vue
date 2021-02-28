@@ -15,11 +15,8 @@
               class="navbar-item link is-info"
               :title="`Ir a la página de inicio de ${owner.copyright}`"
             >
-              Inicio
+              ¿Qué es Ioana Chef?
             </NuxtLink>
-          </p>
-          <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[2]" :offset="getOffset()" />
           </p>
           <p class="level-item has-text-centered navbar-brand">
             <NuxtLink
@@ -36,19 +33,13 @@
               >
             </NuxtLink>
           </p>
-          <!-- <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[4]" :offset="getOffset()" />
-          </p> -->
-          <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[6]" :offset="getOffset()" />
-          </p>
           <p class="level-item has-text-centered">
             <NuxtLink
               to="/legal"
               class="navbar-item link is-info"
               :title="`Ir a la página de términos legales de ${owner.copyright}`"
             >
-              Legal
+              Aviso legal
             </NuxtLink>
           </p>
         </nav>
@@ -58,71 +49,6 @@
     <transition name="chefioana-transition" appear>
       <Nuxt />
     </transition>
-    <!-- Aside main Menu (mobile only) -->
-    <div :class="['aside-navbar-menu', { 'is-open': isMenuShown }, 'has-text-centered']">
-      <div class="aside-logo">
-        <img
-          :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
-          :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          width="100"
-          height="124"
-        >
-      </div>
-      <ul class="aside-nav-list" @click="isMenuShown = false">
-        <li
-          :class="{ 'is-active': showLink(index) }"
-          v-for="(link, index) in links"
-          :key="index"
-          @click="toggleClick(index)"
-        >
-          <!-- <ItemNavbar :link="links[0]" :offset="getOffset()" /> -->
-          <ItemNavbar class="has-text-weight-medium" :link="link" :offset="getOffset()" />
-        </li>
-        <li>
-          <a
-            class="navbar-item phone is-flex is-justify-content-center" 
-            :href="`tel:${owner.phone}`"
-            :title="`Llamar a ${owner.copyright}`"
-          >
-            <figure class="image is-24x24px">
-              <img
-                src="~/assets/images/icons/phone-in-talk.svg"
-                title="Icono de llamada por teléfono"
-                alt="Icono de llamada por teléfono"
-                width="24"
-                height="24"
-              >
-            </figure>
-            <span class="has-text-primary has-text-weight-medium ml-2">
-              644 09 34 70
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="navbar-item whatsapp is-flex is-justify-content-center" 
-            :href="`https://wa.me/34${owner.phone}`"
-            :title="`Llamar o escribir al WhatsApp ${owner.phone} de ${owner.copyright}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <figure class="image is-24x24px">
-              <img
-                src="~/assets/images/icons/whatsapp.svg"
-                title="Icono de WhatsApp"
-                alt="Icono de WhatsApp"
-                width="24"
-                height="24"
-              >
-            </figure>
-            <span class="has-text-success has-text-weight-bold ml-2">
-              WhatsApp
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
     <!-- bottom Navbar (small screen devices only) -->
     <nav
       class="navbar is-fixed-bottom bottom-bar"
@@ -131,15 +57,22 @@
       v-if="$mq == 'mobile' || $mq == 'smartphone' || $mq == 'tablet'"
     >
       <div class="navbar-brand">
-        <a
-          role="button"
-          :class="['navbar-burger', 'burger', { 'is-active': isMenuShown }]"
-          aria-label="menu"
-          aria-expanded="false"
-          @click.prevent="isMenuShown = !isMenuShown"
+        <NuxtLink
+          to="/"
+          class="navbar-item is-flex is-flex-direction-column ml-1"
+          :title="`Ir a la página de inicio de ${owner.copyright}`"
         >
-          <span aria-hidden="true" v-for="item in 3"></span>
-        </a>
+          <figure class="image is-24x24px">
+            <img
+              src="~/assets/images/icons/chef-hat.svg"
+              title="Icono de gorro de Chef"
+              alt="Icono de gorro de Chef"
+              width="24"
+              height="24"
+            >
+          </figure>
+          <small class="has-text-warning has-text-weight-medium">Inicio</small>
+        </NuxtLink>
         <NuxtLink
           class="navbar-item has-logo"
           to="/"
@@ -182,28 +115,8 @@ export default {
   data() {
     return {
       currentLink: 0,
-      isMenuShown: false,
       owner: this.$store.state.owner,
-      links: this.$store.state.pages.links
-    }
-  },
-  methods: {
-    getOffset() {
-      let mq = this.$mq
-      if (mq === 'mobile' || mq === 'smartphone' || mq === 'tablet') {
-        return 0 // layout without top navbar (small screens)
-      }
-      return -53 // layout with top navbar (big screens)
-    },
-    showLink(id) {
-      return this.currentLink === id
-    },
-    toggleClick(id) {
-      if(this.currentLink !== 0) {
-        this.currentLink = 0
-        return false
-      }
-      this.currentLink = id
+      // links: this.$store.state.pages.links
     }
   }
 }

@@ -62,7 +62,7 @@
       </div>
       <ul class="aside-nav-list" @click="isMenuShown = false">
         <li
-          :class="{ 'is-active': showLink(index) }"
+          :class="[link.section, { 'is-active': showLink(index) }]"
           v-for="(link, index) in links"
           :key="index"
           @click="toggleClick(index)"
