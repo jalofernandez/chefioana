@@ -14,6 +14,11 @@
   border: 0
   padding: 0
 
+html, body
+  &.has-navbar-fixed-top
+    @media (max-width: 1023px)
+      padding-top: 0!important
+
 html
   color: #481300
   font-size: 16px
@@ -37,6 +42,10 @@ ul, ol,
   font-family: $font-title
   &.has-text-weight-bold
     letter-spacing: 0.03rem
+
+.heading + .button
+  @media (max-width: 768px)
+    min-width: 225px
 
 .has-underline
   text-decoration: underline

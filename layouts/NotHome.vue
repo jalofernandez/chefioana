@@ -10,10 +10,13 @@
       <div class="container">
         <nav class="level is-align-items-center is-justify-content-space-around">
           <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[1]" :offset="getOffset()" />
-          </p>
-          <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[3]" :offset="getOffset()" />
+            <NuxtLink
+              to="/"
+              class="navbar-item link is-info"
+              :title="`Ir a la página de inicio de ${owner.copyright}`"
+            >
+              Inicio
+            </NuxtLink>
           </p>
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[2]" :offset="getOffset()" />
@@ -33,14 +36,20 @@
               >
             </NuxtLink>
           </p>
-          <p class="level-item has-text-centered">
+          <!-- <p class="level-item has-text-centered">
             <ItemNavbar :link="links[4]" :offset="getOffset()" />
-          </p>
-          <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[5]" :offset="getOffset()" />
-          </p>
+          </p> -->
           <p class="level-item has-text-centered">
             <ItemNavbar :link="links[6]" :offset="getOffset()" />
+          </p>
+          <p class="level-item has-text-centered">
+            <NuxtLink
+              to="/"
+              class="navbar-item link is-info"
+              :title="`Ir a la página de términos legales de ${owner.copyright}`"
+            >
+              Legal
+            </NuxtLink>
           </p>
         </nav>
       </div>
@@ -163,6 +172,8 @@
         </a>
       </div>
     </nav>
+    <!-- Floating contact item -->
+    <ItemContact v-if="$mq == 'laptop' || $mq == 'desktop' || $mq == 'desktopWide'" />
   </div>
 </template>
 
