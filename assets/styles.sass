@@ -277,6 +277,18 @@ ul, ol,
   ul li
     margin: .25rem
     opacity: .5
+  .has-navbar
+    .nuxt-link-exact-active, span
+      pointer-events: none
+      cursor: text
+      color: $color-secondary
+      text-decoration: none
+    :not(.nuxt-link-exact-active)
+      color: #4a4a4a
+      @media (hover: hover)
+        &:hover, &:focus
+          color: $color-secondary
+
 
 .index
   .media

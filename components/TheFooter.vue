@@ -15,29 +15,37 @@
         </picture>
       </div> -->
       <div class="has-text-centered">
-        <div class="control level-item mb-6">
+        <div class="control level-item mb-6 has-navbar">
           <NuxtLink
             to="/"
-            class="has-underline has-text-dark has-text-weight-medium"
+            class="has-underline has-text-weight-medium"
             :title="`Ir a la página de inicio de ${owner.copyright}`"
           >
-            <span>Inicio</span>
+            Inicio
+          </NuxtLink>
+          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <NuxtLink
+            to="/contacto"
+            class="has-underline has-text-weight-medium"
+            :title="`Ir a la página de Contacto de ${owner.copyright}`"
+          >
+            Contacto
           </NuxtLink>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
           <NuxtLink
             to="/"
-            class="has-underline has-text-dark has-text-weight-medium"
+            class="has-underline has-text-weight-medium"
             :title="`Ir a la página de términos legales de ${owner.copyright}`"
           >
-            <span>Legal</span>
+            Legal
           </NuxtLink>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
           <NuxtLink
             to="/"
-            class="has-underline has-text-dark has-text-weight-medium"
+            class="has-underline has-text-weight-medium"
             :title="`Ir a la página del mapa del sitio web de ${owner.copyright}`"
           >
-            <span>Sitemap</span>
+            Sitemap
           </NuxtLink>
         </div>
         <div class="control level-item">
