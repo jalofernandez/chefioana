@@ -81,7 +81,7 @@ export default {
             },
             {
               description:
-                '<b>Rabo de toro</b> al <span class="has-text-weight-medium">estilo tradicional cordobés</span>4 con su estofado de verduras frescas de la huerta y su vino de rivera.',
+                '<b>Rabo de toro</b> al <span class="has-text-weight-medium">estilo tradicional cordobés</span> con su estofado de verduras frescas de la huerta y su vino de rivera.',
               src: 'chefioana-video-menu-rabo-de-toro'
             }
           ]
