@@ -41,7 +41,7 @@
           </NuxtLink>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
           <NuxtLink
-            to="/"
+            to="/sitemap"
             class="has-underline has-text-weight-medium"
             :title="`Ir a la página del mapa del sitio web de ${owner.copyright}`"
           >

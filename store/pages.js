@@ -7,6 +7,7 @@ export const state = () => ({
     { name: "Ofertas", section: "discounts" },
     { name: "Seguridad", section: "safety" },
     { name: "Sobre Ioana", section: "about" },
-    { name: "Legal", section: "legal" }
+    { name: "Legal", section: "legal" },
+    { name: "Sitemap", section: "sitemap" }
   ]
 })
