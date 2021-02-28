@@ -33,7 +33,7 @@
           </NuxtLink>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
           <NuxtLink
-            to="/"
+            to="/legal"
             class="has-underline has-text-weight-medium"
             :title="`Ir a la página de términos legales de ${owner.copyright}`"
           >

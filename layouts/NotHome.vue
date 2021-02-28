@@ -44,7 +44,7 @@
           </p>
           <p class="level-item has-text-centered">
             <NuxtLink
-              to="/"
+              to="/legal"
               class="navbar-item link is-info"
               :title="`Ir a la página de términos legales de ${owner.copyright}`"
             >

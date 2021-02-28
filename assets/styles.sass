@@ -299,6 +299,22 @@ ul, ol,
     margin: 0 auto
     border: none
 
+// TABS layout & behaviour
+.tabs-wrapper
+  position: relative
+  .tabs
+    @include color-bg-opacity(white,.6)
+    backdrop-filter: saturate(180%) blur(5px)
+    z-index: 10
+    position: sticky
+    top: 58px
+    @media screen and (max-width: 1023px)
+      top: 0
+
+    li.is-active a
+      border-bottom-color: $color-secondary
+      color: $color-secondary
+
 // Animations
 @keyframes animAppear
   0%

@@ -7,19 +7,7 @@
     >
       <div class="columns is-vcentered content is-medium">
         <div class="column is-6 has-custom-margin">
-          <h2
-            :class="[
-              'is-title',
-              'is-size-2-widescreen',
-              'is-size-3-desktop',
-              'is-size-4-touch',
-              'has-text-primary',
-              'is-relative',
-              $mq == 'mobile' || $mq == 'smartphone' ? 'has-text-weight-bold' : 'has-text-weight-medium'
-            ]"
-            v-html="item.title"
-          >
-          </h2>
+          <ItemTitle :title="item.title" />
           <p
             class="is-size-4-fullhd is-size-4-widescreen is-size-5-desktop is-size-6-touch"
             v-html="item.description"
