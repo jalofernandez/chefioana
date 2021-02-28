@@ -91,12 +91,8 @@ ul, ol,
     .navbar-brand
       justify-content: space-between
       align-items: center
+      @include floating-item()
       margin: 0 1.5rem 1.5rem 1.25rem
-      @include color-bg-opacity($color-lighter,.5)
-      backdrop-filter: saturate(180%) blur(5px)
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-      border: 1px solid white
-      border-radius: 50px
       .whatsapp .image
         padding: .25rem
         margin-right: .33rem
@@ -289,6 +285,13 @@ ul, ol,
         &:hover, &:focus
           color: $color-secondary
 
+.is-floating-contact
+  position: fixed
+  bottom: 3%
+  right: 2%
+  @include floating-item()
+  padding: .5rem
+  z-index: 29
 
 .index
   .media

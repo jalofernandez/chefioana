@@ -13,6 +13,13 @@ $backdrop: saturate(180%) blur(5px) // in modern browsers only
 @mixin color-bg-opacity($color, $opacity)
   background-color: rgba($color,$opacity)
 
+@mixin floating-item()
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  border: 1px solid white
+  border-radius: 50px
+  @include color-bg-opacity($color-lighter,.5)
+  backdrop-filter: saturate(180%) blur(5px)
+
 $primary: $color-main
 $warning: $color-secondary
 
