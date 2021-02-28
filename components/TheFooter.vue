@@ -52,7 +52,7 @@
           <NuxtLink to="/">
             <div class="tags are-medium has-addons">
               <span class="tag is-dark">© {{ owner.copyright }}</span>
-              <span class="tag is-link">{{ owner.version }}</span>
+              <span class="tag is-warning">{{ owner.version }}</span>
             </div>
           </NuxtLink>
         </div>

@@ -108,7 +108,7 @@ export default {
   head() {
     const title = 'Contacto de'
     const description =
-      'Contacta con ' + this.owner.copyright + '. Reserva noche y menú por teléfono y WhatsApp: 644 09 34 70'
+      'Contacta con ' + this.owner.copyright + '. Reservas y consultas por teléfono y WhatsApp: 644 09 34 70'
     const canonical = 'https://' + this.owner.url + this.$route.path
 
     return {

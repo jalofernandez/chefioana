@@ -9,7 +9,7 @@
     <div class="media-content mr-2 ml-1">
       <div class="content">
         <p>
-          <span class="has-text-weight-medium">¿Qué quieres cenar?</span>
+          <span class="has-text-weight-semibold">¿Qué quieres cenar?</span>
           <br/>
           ¿Dudas? ¡Escríbeme!
         </p>
