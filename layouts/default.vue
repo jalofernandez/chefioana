@@ -162,9 +162,7 @@
           </figure>
         </a>
       </div>
-    </nav>
-    <!-- Floating contact item -->
-    <ItemContact v-if="$mq == 'laptop' || $mq == 'desktop' || $mq == 'desktopWide'" />                                                                                                                                                        
+    </nav>                                                                                                                                                        
   </div>
 </template>
 

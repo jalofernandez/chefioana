@@ -63,6 +63,12 @@
         </div>
       </div>
 
+      <transition name="fade">
+        <ItemContact
+          v-if="scrolling && $mq == 'laptop' || $mq == 'desktop' || $mq == 'desktopWide'"
+        />
+      </transition>
+
       <SectionTitle :header="header.features" :id="links[1].section" />
       <SectionChessBoard :items="features" :page="$route.name" />
 
@@ -90,6 +96,7 @@
 export default {
   data() {
     return {
+      scrolling: false,
       owner: this.$store.state.owner,
       links: this.$store.state.pages.links,
       header: {
@@ -294,7 +301,21 @@ export default {
       ]
     }
   },
+  created() {
+    if (process.client) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
+  },
   methods: {
+    handleScroll() {
+      const top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+      this.scrolling = top > 150
+    },
     getOffset() {
       let mq = this.$mq
       if (mq === 'mobile' || mq === 'smartphone' || mq === 'tablet') {
