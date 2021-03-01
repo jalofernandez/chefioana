@@ -163,6 +163,8 @@
         </a>
       </div>
     </nav>
+    <!-- Floating contact item -->
+    <ItemContact v-if="$mq == 'laptop' || $mq == 'desktop' || $mq == 'desktopWide'" />                                                                                                                                                        
   </div>
 </template>
 
