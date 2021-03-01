@@ -23,7 +23,7 @@ export default {
     header: {
       type: String,
       required: true,
-      default: null
+      default: ''
     },
     id: {
       type: String,
