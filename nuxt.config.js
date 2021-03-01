@@ -89,6 +89,7 @@ export default {
     'nuxt-webfontloader',
     'nuxt-mq',
     'vue-scrollto/nuxt',
+    'nuxt-lazy-load',
     '@nuxtjs/robots',
     // IMP!: always declare the sitemap module at end of array
     '@nuxtjs/sitemap',

@@ -30,11 +30,12 @@
       </picture>
       <video
         class="has-aspect-ratio is-16by9"
-        :poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
+        :data-poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
         :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
         playsinline autoplay muted loop
+        v-lazy-load
       >
-        <source :src="require(`~/assets/videos/${dish.src}.mp4`)" type="video/mp4">
+        <source :data-src="require(`~/assets/videos/${dish.src}.mp4`)" type="video/mp4">
       </video>
     </div>
   </article>
