@@ -82,6 +82,7 @@ export default {
   ],
 
   buildModules: [
+    '@nuxtjs/pwa'
   ],
 
   modules: [
@@ -117,6 +118,25 @@ export default {
       desktopWide: 2000,
       desktopUltraWide: Infinity
     }
+  },
+
+  pwa: {
+    manifest: {
+      name: 'chef ioana en casa',
+      short_name: 'chef ioana',
+      description: description,
+      // start_url: 'index.html?launcher=true', // value by default ("/?standalone=true")
+      lang: 'es', 
+      // display: 'standalone', // value by default
+      background_color: '#111111',
+      theme_color: '#fc363a',
+      lang: 'es-ES',
+      // dir: 'ltr', // value by default
+      // useWebmanifestExtension: false, // value by default. With true the file extension will be ".webmanifest" instead ".json"
+    },
+    workbox: {
+      // enabled: true, // check it asap!
+    },
   },
 
   robots: {
