@@ -89,6 +89,9 @@
     <SectionTitle :header="header.about" :id="links[6].section" />
     <SectionBiography />
 
+    <ItemTitle class="has-text-centered" :title="header.reviews" />
+    <SectionReviews />
+
     <TheFooter />
   </main>
 </template>
@@ -101,7 +104,8 @@ export default {
       owner: this.$store.state.owner,
       links: this.$store.state.pages.links,
       header: {
-        about: 'Sobre Chef Ioana'
+        about: 'Sobre Chef Ioana',
+        reviews: 'Opiniones de clientes'
       }
     }
   },

@@ -293,10 +293,31 @@ ul, ol,
   z-index: 29
 
 .index
-  .media
+  .media:not(.review-item)
     max-width: 600px
     margin: 0 auto
     border: none
+
+// section Reviews
+.reviews-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start
+  align-items: stretch
+
+.review-item
+  margin: .5rem
+  width: calc(33.3333% - 1rem)
+  @media screen and (max-width: 899px)
+    width: calc(50% - 1rem)
+  @media screen and (max-width: 580px)
+    width: calc(100% - 1rem)
+
+.is-review-img
+  img
+    width: 24px
+    height: 24px
 
 // TABS layout & behaviour
 .tabs-wrapper
@@ -368,7 +389,7 @@ $height-coverer: 80vh
     top: -$height-coverer
     @media screen and (max-width: 480px)
       top: -$height-coverer / 2
-  .container
+  .is-overlaped
     @media screen and (min-width: 481px)
       position: relative
       bottom: 5rem

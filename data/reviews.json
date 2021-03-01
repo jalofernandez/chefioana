@@ -1,0 +1,58 @@
+{
+  "reviews": [
+    {
+      "name": "Olimpia Dabuin",
+      "reviewId": "3434645647",
+      "reviewer": {
+        "profilePhotoUrl": "olimpia-dabuin",
+        "displayName": "Olimpia",
+        "isAnonymous": false
+      },
+      "starRating": 5,
+      "comment": "Estos días de confinamiento nos hemos aficionado a su arroz con pulpo y gambas, buenísimo, como el resto de la carta! Además son muy amables, lo recomiendo!",
+      "createTime": "2021-01-04T15:01:23Z",
+      "updateTime": "2021-01-04T15:01:23Z",
+      "reviewReply": {
+        "comment": null,
+        "updateTime": null
+      }
+    },
+    {
+      "name": "Cristina Montesinos Jara",
+      "reviewId": "3434645647",
+      "reviewer": {
+        "profilePhotoUrl": "cristina-montesinos",
+        "displayName": "Cris",
+        "isAnonymous": false
+      },
+      "starRating": 5,
+      "comment": "Siempre que hemos ido nos han atendido muy bien. Los productos que ofrecen para comer son de estupenda calidad y la mano de su cocinera espectacular. Recomiendo el pulpo!!!!",
+      "createTime": "2021-01-04T15:01:23Z",
+      "updateTime": "2021-01-04T15:01:23Z",
+      "reviewReply": {
+        "comment": null,
+        "updateTime": null
+      }
+    },
+    {
+      "name": "Fátima Nogales Lora",
+      "reviewId": "3434645647",
+      "reviewer": {
+        "profilePhotoUrl": "fatima-nogales",
+        "displayName": "Fati",
+        "isAnonymous": false
+      },
+      "starRating": 5,
+      "comment": "Lloro con la espuma de setas 😍 😍 😄",
+      "createTime": "2021-01-04T15:01:23Z",
+      "updateTime": "2021-01-04T15:01:23Z",
+      "reviewReply": {
+        "comment": null,
+        "updateTime": null
+      }
+    }
+  ],
+  "averageRating": 5,
+  "totalReviewCount": 700,
+  "nextPageToken": null
+}

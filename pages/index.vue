@@ -23,7 +23,7 @@
 
     <div class="is-below-video-header">
 
-      <div class="container">
+      <div class="container is-overlaped">
         <div class="level is-justify-content-space-around">
           <div
             class="level-item has-text-centered"
@@ -87,6 +87,9 @@
       <SectionTitle :header="header.about" :id="links[6].section" />
       <SectionBiography />
 
+      <ItemTitle class="has-text-centered" :title="header.reviews" />
+      <SectionReviews />
+
       <TheFooter />
     </div>
   </main>
@@ -104,7 +107,9 @@ export default {
         advantages: 'Son todo ventajas',
         menu: '¿Quieres un menú de chef como este?',
         discounts: 'Descuentos y ofertas',
-        safety: 'Seguridad'
+        safety: 'Seguridad',
+        about: 'Sobre chef Ioana',
+        reviews: 'Opiniones de clientes'
       },
       summaryTips: [
         {

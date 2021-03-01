@@ -112,9 +112,6 @@
       </div>
     </section>
 
-    <SectionTitle :header="header.about" :id="links[6].section" />
-    <SectionBiography />
-
     <TheFooter />
   </main>
 </template>
