@@ -1,88 +1,88 @@
 <template>
   <main :class="$route.name">
-    <section class="hero is-fullheight video mb-6">
-      <div class="hero-video">
-        <video
-          class="hero-video has-aspect-ratio is-16by9"
-          :poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
-          :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
-          playsinline autoplay muted loop
-        >
-          <source src="~/assets/videos/chefioana-video-menu-postre.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 id="section-intro" class="title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
+    <header class="video-header">
+      <video
+        id="bgvid"
+        :poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
+        :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
+        playsinline autoplay muted loop
+      >
+        <source src="~/assets/videos/chefioana-video-menu-postre.mp4" type="video/mp4">
+      </video>
+      <div class="viewport-header">
+        <div>
+          <h1 id="section-intro" class="video-header-title title text-shadow is-size-1 is-size-3-mobile has-text-weight-medium">
             <b class="has-text-primary">Chef</b> Ioana <b class="has-text-primary">en casa</b>
           </h1>
           <h2 class="subtitle is-size-5 is-size-6-mobile">
-            <span class="has-text-weight-medium">Come en tu casa como en el mejor restaurante</span>
+            <span class="has-text-weight-semibold">Come en tu casa como en el mejor restaurante</span>
           </h2>
         </div>
       </div>
-      <div class="hero-foot">
-        <div class="container">
-          <div class="level is-justify-content-space-around">
-            <div
-              class="level-item has-text-centered"
-              v-for="(tip, index) in summaryTips"
-              :key="index"
-            >
-              <div class="card mb-2">
-                <!-- <div
-                  class="card-bg-img is-mobile-apps"
-                  v-if="$mq !== 'mobile' && $mq !== 'smartphone'"
-                ></div> -->
-                <div class="card-content">
-                  <h3 class="subtitle is-size-5 is-size-6-mobile">
-                    <b class="has-text-primary">
-                      {{ tip.title }}
-                    </b>
-                    <br class="is-hidden-touch"/>
-                    <span v-html="tip.description"></span>
-                  </h3>
-                </div>
-                <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <span>
-                      <a
-                        class="has-text-warning has-hover-underline"
-                        href=""
-                        v-scroll-to="{ el: '#section-'+tip.link, offset: getOffset() }"
-                        :title="``"
-                      >
-                        <b>Saber más</b>
-                      </a>
-                    </span>
-                  </p>
-                </footer>
+    </header>
+
+    <div class="is-below-video-header">
+
+      <div class="container">
+        <div class="level is-justify-content-space-around">
+          <div
+            class="level-item has-text-centered"
+            v-for="(tip, index) in summaryTips"
+            :key="index"
+          >
+            <div class="card mb-2">
+              <!-- <div
+                class="card-bg-img is-mobile-apps"
+                v-if="$mq !== 'mobile' && $mq !== 'smartphone'"
+              ></div> -->
+              <div class="card-content">
+                <h3 class="subtitle is-size-5 is-size-6-mobile">
+                  <b class="has-text-primary">
+                    {{ tip.title }}
+                  </b>
+                  <br class="is-hidden-touch"/>
+                  <span v-html="tip.description"></span>
+                </h3>
               </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a
+                      class="has-text-warning has-hover-underline"
+                      href=""
+                      v-scroll-to="{ el: '#section-'+tip.link, offset: getOffset() }"
+                      :title="``"
+                    >
+                      <b>Saber más</b>
+                    </a>
+                  </span>
+                </p>
+              </footer>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <SectionTitle :header="header.features" :id="links[1].section" />
-    <SectionChessBoard :items="features" :page="$route.name" />
+      <SectionTitle :header="header.features" :id="links[1].section" />
+      <SectionChessBoard :items="features" :page="$route.name" />
 
-    <SectionTitle :header="header.advantages" :id="links[3].section" />
-    <SectionMediaObject :media="advantages" />
+      <SectionTitle :header="header.advantages" :id="links[3].section" />
+      <SectionMediaObject :media="advantages" />
 
-    <SectionTitle :header="header.menu" :id="links[2].section" />
-    <SectionMenuExample />
+      <SectionTitle :header="header.menu" :id="links[2].section" />
+      <SectionMenuExample />
 
-    <SectionTitle :header="header.discounts" :id="links[4].section" />
-    <SectionMediaObject :media="discounts" />
+      <SectionTitle :header="header.discounts" :id="links[4].section" />
+      <SectionMediaObject :media="discounts" />
 
-    <SectionTitle :header="header.safety" :id="links[5].section" />
-    <SectionChessBoard :items="safety" :page="$route.name" />
+      <SectionTitle :header="header.safety" :id="links[5].section" />
+      <SectionChessBoard :items="safety" :page="$route.name" />
 
-    <SectionTitle :header="header.about" :id="links[6].section" />
-    <SectionBiography />
+      <SectionTitle :header="header.about" :id="links[6].section" />
+      <SectionBiography />
 
-    <TheFooter />
+      <TheFooter />
+    </div>
   </main>
 </template>
 

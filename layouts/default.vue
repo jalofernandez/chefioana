@@ -29,7 +29,7 @@
                 :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 width="80"
-                height="92"
+                height="50"
               >
             </NuxtLink>
           </p>
