@@ -28,8 +28,8 @@
           <div class="content">
             <ItemTitle class="has-text-centered" :title="sections[0].name" />
             <p class="block">
-              <span class="has-text-primary has-text-weight-semibold">{{ owner.copyright }}</span> es una marca comercial propiedad de <em>{{ owner.name }}</em> 
-              que a su vez es responsable del sitio web, pone a disposición de los usuarios el presente documento con el que pretende:
+              <span class="has-text-primary has-text-weight-semibold">{{ owner.copyright }}</span> es una marca comercial propiedad de <em class="has-text-weight-medium">{{ owner.name }}</em> 
+              que a su vez es dueña y responsable del sitio web y pone a disposición de los usuarios toda esta información con la que pretende:
             </p>
             <p class="block">
               <b>1.</b> Dar cumplimiento a las obligaciones dispuestas en las Leyes:
@@ -76,36 +76,40 @@
               <b>2.</b> Informar a todos los usuarios del sitio web respecto a cuáles son sus condiciones de uso.
             </p>
             <p class="block">
-              A continucación exponemos los datos identificativos del "prestador" del presente sitio web, <span class="has-text-primary">{{ owner.url }}</span>, 
-              y todos sus servicios asociados:
+              Aquí listamos los <span class="has-text-weight-medium">datos identificativos</span> del "prestador" del presente sitio web,
+              <span class="has-text-primary">{{ owner.url }}</span>, y todos <span class="has-text-weight-medium">los servicios</span> en él ofertados:
             </p>
             <blockquote class="quote">
-              <p><b class="pr-1">Prestador:</b> {{ owner.name }} ( Chef Ioana )</p>
-              <p><b class="pr-1">DNI:</b> ¿?</p>
+              <p>
+                <b class="pr-1">Prestador:</b> <span class="has-text-weight-medium">{{ owner.name }} (Chef Ioana)</span>
+              </p>
+              <p>
+                <b class="pr-1">DNI:</b> <span class="has-text-weight-medium">7773823F</span>
+              </p>
               <!-- <p class="is-size-7-mobile">
                 <b>Registro mercantil:</b> ¿?
               </p>-->
               <p>
-                <b class="pr-1">Domicilio:</b> Pje. de Colón, 2, Local 7, 28341 Valdemoro, Madrid
+                <b class="pr-1">Domicilio:</b> <span class="has-text-weight-medium">Pje. de Colón, 2, Local 7, 28341 Valdemoro, Madrid</span>
               </p>
               <p>
                 <b class="pr-1">Correo electrónico:</b>
                 <a
                   :href="`mailto:${owner.email}`"
-                  class="has-text-link"
+                  class="has-text-link has-text-weight-medium"
                   :title="`Contactar vía correo electrónico con ${owner.copyright} en: ${owner.email}`"
                 >
-                <span class="has-underline">{{ owner.email }}</span>
-              </a>
+                  <span class="has-underline">{{ owner.email }}</span>
+                </a>
               </p>
             </blockquote>
             <p class="block"></p>
-              Por entrar y navegar por este sitio web ya adquieres la condición de "usuario".
+              Ojo, que por entrar y navegar por este sitio web ya adquieres la condición de "usuario".
             </p>
             <p class="block">
               Además <span class="has-text-primary has-text-weight-semibold">{{ owner.copyright }}</span>, osea el "prestador" (nosotros), 
-              somos proveedores de servicios y productos relacionados con el ámbito de la peluquería y estética
-              canina / felina conocida también como <em>dog grooming</em>.
+              somos proveedores de servicios y productos relacionados con el ámbito de la hostelería, la restauración y la alimentación
+              en general dentro del sector <em class="has-text-weight-medium">horeca</em>.
             </p>
           </div>
         </article>
