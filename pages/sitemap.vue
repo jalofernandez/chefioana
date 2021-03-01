@@ -1,7 +1,7 @@
 <template>
   <main :class="$route.name">
     <SectionTitle :header="header.sitemap" isPageTitle />
-    <TheFooter />
+    <TheFooter isLogoHidden />
   </main>
 </template>
 

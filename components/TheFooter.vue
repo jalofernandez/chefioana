@@ -1,19 +1,19 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <!-- <div class="content has-text-centered">
+      <div class="content has-text-centered" v-if="!isLogoHidden">
         <picture>
-          <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png?webp')" type="image/webp" />
-          <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png')" type="image/png" />
+          <!-- <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png?webp')" type="image/webp" />
+          <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png')" type="image/png" /> -->
           <img
-            :src="require(`~/assets/images/logos/canessa-bone-logo.png`)"
-            :alt="`Creatividad de ${owner.nickname} en Valdemoro, Madrid`"
-            :title="`Creatividad de ${owner.nickname} en Valdemoro, Madrid`"
-            width="200"
-            height="67"
+            :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
+            :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+            :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
+            width="100"
+            height="124"
           >
         </picture>
-      </div> -->
+      </div>
       <div class="has-text-centered">
         <div class="control level-item mb-6 has-navbar">
           <NuxtLink
@@ -114,6 +114,13 @@
 <script>
 export default {
   name: 'TheFooter',
+  props: {
+    isLogoHidden: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   data() {
     return {
       owner: this.$store.state.owner,
