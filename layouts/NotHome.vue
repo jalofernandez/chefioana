@@ -38,8 +38,17 @@
               to="/legal"
               class="navbar-item link is-info"
               :title="`Ir a la página de términos legales de ${owner.copyright}`"
+              v-if="$route.name !== 'legal'"
             >
               Aviso legal
+            </NuxtLink>
+            <NuxtLink
+              to="/contacto"
+              class="navbar-item link is-info"
+              :title="`Ir a la página de términos legales de ${owner.copyright}`"
+              v-else
+            >
+              Contacto
             </NuxtLink>
           </p>
         </nav>
