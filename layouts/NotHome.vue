@@ -28,8 +28,8 @@
                 :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
                 :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-                width="80"
-                height="92"
+                width="94"
+                height="50"
               >
             </NuxtLink>
           </p>
@@ -82,7 +82,7 @@
             :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
             :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-            width="66"
+            width="94"
             height="50"
           >
         </NuxtLink>

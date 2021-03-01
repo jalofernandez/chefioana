@@ -6,11 +6,11 @@
           <!-- <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png?webp')" type="image/webp" />
           <source :srcset="require('~/assets/images/logos/canessa-bone-logo.png')" type="image/png" /> -->
           <img
-            :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
+            :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
             :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-            width="100"
-            height="124"
+            width="150"
+            height="80"
           >
         </picture>
       </div>

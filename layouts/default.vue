@@ -28,7 +28,7 @@
                 :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
                 :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-                width="80"
+                width="94"
                 height="50"
               >
             </NuxtLink>
@@ -53,11 +53,11 @@
     <div :class="['aside-navbar-menu', { 'is-open': isMenuShown }, 'has-text-centered']">
       <div class="aside-logo">
         <img
-          :src="require(`~/assets/images/logos/chef-ioana-logo-complete.svg`)"
-          :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-          width="100"
-          height="124"
+          src="~/assets/images/ioanachef-con-paella.png"
+          title="Chef Ioana Botis con unas crujientes croquetas caseras"
+          alt="Foto de perfil de chef Ioana Botis"
+          width="90"
+          height="90"
         >
       </div>
       <ul class="aside-nav-list" @click="isMenuShown = false">
@@ -140,7 +140,7 @@
             :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
             :alt="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
-            width="66"
+            width="94"
             height="50"
           >
         </NuxtLink>
