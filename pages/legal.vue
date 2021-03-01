@@ -1,6 +1,6 @@
 <template>
   <main :class="$route.name">
-    <SectionTitle :header="header.legal" />
+    <SectionTitle :header="header.legal" isPageTitle />
 
     <section class="tabs-wrapper">
       <!-- 00 :: scroll navigation sticky bar -->

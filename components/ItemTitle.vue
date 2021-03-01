@@ -1,5 +1,5 @@
 <template>
-  <h2
+  <h4
     :class="[
       'is-title',
       'is-size-2-widescreen',
@@ -11,7 +11,7 @@
     ]"
     v-html="title"
   >
-  </h2>
+  </h4>
 </template>
 
 <script>

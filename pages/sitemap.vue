@@ -1,6 +1,6 @@
 <template>
   <main :class="$route.name">
-    <SectionTitle :header="header.sitemap" :id="links[6].section" />
+    <SectionTitle :header="header.sitemap" isPageTitle />
     <TheFooter />
   </main>
 </template>
