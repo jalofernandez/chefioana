@@ -22,7 +22,9 @@
           </li>
         </ul>
       </div>
-      <div class="section">
+
+      <div class="section has-text-a-lot">
+
         <!-- 01 :: PRESTADOR Y RESPONSABILIDAD -->
         <article id="section-responsability" class="container responsability mb-6">
           <div class="content">
@@ -113,6 +115,52 @@
             </p>
           </div>
         </article>
+
+        <!-- 02 :: POLÍTICA DE PRIVACIDAD -->
+        <article id="section-privacy" class="container privacy mb-6">
+          <div class="content">
+            <ItemTitle class="has-text-centered" :title="sections[1].name" />
+            <p class="block">
+              Cualquier dato que tú como "usuario" nos facilites a través de las vías de contacto actualmente existentes:
+              WhatsApp, teléfono, correo electrónico o redes sociales, serán
+              tratados anónimamente. Podrás ejercer tus derechos legales de: acceso a estos datos, su rectificación, su cancelación y 
+              la oposición a los mismos tal y como te explicaremos un poco más adelante.
+            </p>
+            <p class="block">
+              ...
+            </p>
+          </div>
+        </article>
+
+        <!-- 03 :: CONDICIONES DE USO -->
+        <article id="section-terms" class="container terms mb-6">
+          <div class="content">
+            <ItemTitle class="has-text-centered" :title="sections[2].name" />
+            <p class="block">
+              La utilización de este sitio web, <span class="has-text-primary">{{ owner.copyright }}</span>, te otorga la condición de
+              "usuario" implicando la <b>aceptación completa de todas las cláusulas y condiciones de uso</b> incluidas en la esta página
+              de <em>aviso legal</em> así como las condiciones particulares que pudieran establecerse entre las dos partes, "prestador" 
+              (<em>nosotros</em>) y Usuario (<em>tú</em>), en relación con la prestación de los servicios previamente acordados.
+            </p>
+            <p class="block">
+              ...
+            </p>
+          </div>
+        </article>
+
+        <!-- 04 :: POLÍTICA DE COOKIES -->
+        <article id="section-cookies" class="container cookies mb-6">
+          <div class="content">
+            <ItemTitle class="has-text-centered" :title="sections[3].name" />
+            <h3 class="subtitle is-size-5 is-size-6-mobile mt-3">
+              Es necesario informar sobre las cookies porque...
+            </h3>
+            <p class="block">
+              ...
+            </p>
+          </div>
+        </article>
+        
       </div>
     </section>
 
