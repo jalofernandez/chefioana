@@ -85,7 +85,7 @@
                 height="24"
               >
             </figure>
-            <span class="has-text-primary has-text-weight-medium ml-2">
+            <span class="has-text-primary has-text-weight-semibold ml-2">
               644 09 34 70
             </span>
           </a>
