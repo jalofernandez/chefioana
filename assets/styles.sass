@@ -47,6 +47,16 @@ ul, ol,
   @media (max-width: 768px)
     min-width: 225px
 
+.button
+  &.is-primary
+    &.is-light
+      background-color: lighten($color-secondary, 28%)
+      color: darken($color-secondary, 10%)
+      &.is-hovered, &:hover,
+      &.is-active, &:active
+        background-color: lighten($color-secondary, 25%)
+        color: darken($color-secondary, 15%)
+
 .has-underline
   text-decoration: underline
 
