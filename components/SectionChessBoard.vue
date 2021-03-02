@@ -12,6 +12,15 @@
             class="is-size-4-fullhd is-size-4-widescreen is-size-5-desktop is-size-6-touch"
             v-html="item.description"
           ></p>
+          <ul>
+            <li
+              class="is-size-5-fullhd is-size-5-widescreen is-size-5-desktop is-size-6-touch"
+              v-for="(li, index) in item.list"
+              :key="index"
+              v-html="li"
+              v-if="item.list"
+            ></li>
+          </ul>
           <!-- <NuxtLink
             :to="{ name: item.to }"
             :class="['th-link', { 'is-size-6-mobile': $mq == 'mobile' }]"
