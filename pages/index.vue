@@ -139,8 +139,8 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: true,
-            src: 'chefioana-video-menu-tapas.mp4',
+            video: false,
+            src: '640x360.png',
             alt: 'Ioana Botis'
           },
           reflected: false
@@ -152,8 +152,8 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: true,
-            src: 'chefioana-video-menu-limpieza.mp4',
+            video: false,
+            src: '640x360.png',
             alt: 'Ioana Botis'
           },
           reflected: true
@@ -165,8 +165,8 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: false,
-            src: '640x360.png',
+            video: true,
+            src: 'chefioana-video-menu-limpieza.mp4',
             alt: 'Ioana Botis'
           },
           reflected: false
@@ -260,8 +260,8 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: true,
-            src: 'chefioana-video-menu-tapas.mp4',
+            video: false,
+            src: '640x360.png',
             alt: 'Ioana Botis'
           },
           reflected: false
