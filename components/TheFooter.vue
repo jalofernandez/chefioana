@@ -126,13 +126,6 @@ export default {
       owner: this.$store.state.owner,
       currentYear: new Date().getFullYear(),
       developBy: 'Website diseñado y desarrollado por',
-      partnership: [
-        { name: 'Protectora AiBa Madrid', url: 'http://www.aibamadrid.com' },
-        { name: 'Haz tu negocio digital', url: 'https://haztunegociodigital.com' },
-        { name: 'Restaurante La Antigua Bodeguita', url: 'https://haztunegociodigital.com/horeca/la-antigua-bodeguita' },
-        { name: 'Bar Galicia', url: 'https://haztunegociodigital.com/horeca/bar-galicia' },
-        { name: '@jalofernandez: designer + coder', url: 'https://jalofernandez.com' }
-      ],
       tech: [ 'nodejs', 'vuejs', 'nuxt', 'language-html5', 'sass', 'firebase' ]
     }
   },
@@ -140,8 +133,7 @@ export default {
     return {
       link: [
         { rel: 'dns-prefetch', href: '//' + this.$store.state.owner.author + '.com' },
-        { rel: 'dns-prefetch', href: '//' + this.$store.state.owner.partner + '.com' },
-        { rel: 'dns-prefetch', href: '//www.aibamadrid.com' },
+        { rel: 'dns-prefetch', href: '//' + this.$store.state.owner.partner + '.com' }
       ]
     }
   }
