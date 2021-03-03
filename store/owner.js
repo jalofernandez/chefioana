@@ -1,4 +1,4 @@
-const nickname = 'Chef Ioana'
+const nickname = 'Ioana chef'
 const alias = 'chefioana'
 const business = nickname + ' en tu casa'
 const url = 'ioanachefentucasa.com'
