@@ -77,6 +77,15 @@
           <ItemNavbar class="has-text-weight-medium" :link="link" :offset="getOffset()" />
         </li>
         <li>
+          <NuxtLink
+            to="/carta"
+            class="navbar-item link is-info has-text-weight-medium"
+            :title="`Ir a la página de Carta y especialidades de ${owner.copyright}`"
+          >
+            Ver la Carta
+          </NuxtLink>
+        </li>
+        <li>
           <a
             class="navbar-item phone is-flex is-justify-content-center" 
             :href="`tel:${owner.phone}`"
