@@ -1,59 +1,128 @@
 <template>
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-primary">
-                  <p class="title">Vertical...</p>
-                  <p class="subtitle">Top tile</p>
-                </article>
-                <article class="tile is-child notification is-warning">
-                  <p class="title">...tiles</p>
-                  <p class="subtitle">Bottom tile</p>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child notification is-info">
-                  <p class="title">Middle tile</p>
-                  <p class="subtitle">With an image</p>
-                  <figure class="image is-16by9">
-                    <img src="~/assets/images/640x360.png">
-                  </figure>
-                </article>
-              </div>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-danger">
-                <p class="title">Wide tile</p>
-                <p class="subtitle">Aligned with the right tile</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </article>
+  <div>
+    <div v-for="(menu, index) in menus" :key="index">
+      <!-- Menu section Title & Description-->
+      <h2
+        :id="`section-${index}`"
+        :class="[
+          'section',
+          'name',
+          { 'with-desc': menu.desc },
+          'is-title',
+          'is-size-2-widescreen',
+          'is-size-3-desktop',
+          'is-size-4-touch',
+          'has-text-primary',
+          $mq == 'mobile' ? 'has-text-weight-bold' : 'has-text-weight-medium',
+          'is-relative'
+        ]"
+      >
+        {{ menu.title }}
+      </h2>
+      <p
+        class="section desc"
+        v-if="menu.desc"
+        v-html="menu.desc"
+      ></p>
+      <!-- each Menu dishes -->
+      <div
+        class="dish item"
+        v-for="(item, index) in menu.items"
+        :key="index"
+        :data-modal="`modal-${item.id}`"
+        @click="item.show = !item.show"
+      >
+        <div class="dish info">
+          <h3 class="name is-size-5-desktop is-size-6-touch">
+            {{ item.name }}
+          </h3>
+          <p
+            class="desc"
+            v-html="item.desc"
+            v-if="item.desc"
+          ></p>
+          <div class="prices">
+            <div
+              class="price item"
+              v-for="(price, index) in item.prices"
+              :key="index"
+              v-if="item.prices"
+            >
+              <small
+                :class="[
+                  'price',
+                  'name',
+                  { 'has-text-warning has-text-weight-medium is-italic': !price.price }
+                ]"
+                v-if="price.name"
+              >
+                {{ price.name }}
+              </small>
+              <span class="price quantity" v-if="price.price">
+                <b>{{ price.price }}</b> €
+              </span>
             </div>
           </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
-              <div class="content">
-                <p class="title">Tall tile</p>
-                <p class="subtitle">With even more content</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
-            </article>
+          <div class="allergens" v-if="item.allergens">
+            <img
+              class="allergen"
+              v-for="(allergen, index) in item.allergens"
+              :key="index"
+              :src="require(`~/assets/images/allergens/${allergen}.svg`)"
+              :title="`Alérgeno: ${allergen}`"
+              :alt="`Alérgeno: ${allergen}`"
+              width="20"
+              height="20"
+            />
           </div>
         </div>
+        <figure class="dish img" v-if="item.img">
+          <img
+            :src="require(`~/assets/images/carta/la-antigua-bodeguita-${item.img}.jpg`)"
+            :title="`${owner.alias}: ${item.desc}`"
+            :alt="`${owner.alias}: ${item.desc}`"
+            :width="menu.imgs.width"
+            :height="menu.imgs.height"
+          />
+        </figure>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionMenu'
+  name: 'SectionMenu',
+  props: {
+    menus: {
+      type: Array,
+      default: null,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      owner: this.$store.state.owner,
+    }
+  },
+  // methods: {
+  //   // TODO: to use Vuex with global data & mutations
+  //   showItemDetail(id) {
+  //     console.log(this.$store.state.business.services + " : " + id);
+  //     this.$store.commit("business/modalBehaviour", id);
+  //   },
+  //   // TODO: description slice trial
+  //   setDescription(str) {
+  //     let count = str.length;
+  //     let slc = str.slice(0, 75).trim();
+  //     let dsc = slc.concat("...");
+
+  //     if (count <= 50) {
+  //       return str;
+  //     } else {
+  //       return dsc;
+  //     }
+  //   },
+  // },
 }
 </script>

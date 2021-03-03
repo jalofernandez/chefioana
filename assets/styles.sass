@@ -90,6 +90,12 @@ ul, ol,
     backdrop-filter: $backdrop
     .level
       width: 100%
+      // > .level-item:not(.is-narrow)
+      .level-item
+        &.is-one-of-three
+          width: 33.3333% // not "Home" pages
+        &.is-one-of-seven
+          width: 14.2857% // "Home" page
     .navbar-item
       font-family: $font-title
       font-size: 1.1rem
@@ -275,6 +281,11 @@ ul, ol,
   @media (min-width: 1024px)
     display: none
 
+.aside-nav-list
+  margin-bottom: 6rem
+  .is-menu-title
+    font-family: $font-title
+
 .aside-logo
   padding: .5rem
 
@@ -283,6 +294,9 @@ ul, ol,
     margin: .25rem
     opacity: .5
   .has-navbar
+    flex-wrap: wrap
+    a
+      padding: .5rem
     .nuxt-link-exact-active, span
       pointer-events: none
       cursor: text
@@ -433,3 +447,6 @@ $height-coverer: 80vh
 .fade-enter,
 .fade-leave-to
   opacity: 0
+
+@import "_menu"
+@import "_modal"

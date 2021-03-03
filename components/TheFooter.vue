@@ -23,7 +23,15 @@
           >
             Inicio
           </NuxtLink>
-          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span>&nbsp;|&nbsp;</span>
+          <NuxtLink
+            to="/carta"
+            class="has-underline has-text-weight-medium"
+            :title="`Ir a la página de Contacto de ${owner.copyright}`"
+          >
+            Carta
+          </NuxtLink>
+          <span>&nbsp;|&nbsp;</span>
           <NuxtLink
             to="/contacto"
             class="has-underline has-text-weight-medium"
@@ -31,7 +39,8 @@
           >
             Contacto
           </NuxtLink>
-          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span>&nbsp;|&nbsp;</span>
+          <br />
           <NuxtLink
             to="/legal"
             class="has-underline has-text-weight-medium"
@@ -39,7 +48,7 @@
           >
             Legal
           </NuxtLink>
-          <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span>&nbsp;|&nbsp;</span>
           <NuxtLink
             to="/sitemap"
             class="has-underline has-text-weight-medium"

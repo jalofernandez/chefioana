@@ -9,16 +9,16 @@
     >
       <div class="container">
         <nav class="level is-align-items-center is-justify-content-space-around">
-          <p class="level-item has-text-centered">
+          <p class="level-item is-one-of-seven has-text-centered">
             <ItemNavbar :link="links[1]" :offset="getOffset()" />
           </p>
-          <p class="level-item has-text-centered">
+          <p class="level-item is-one-of-seven has-text-centered">
             <ItemNavbar :link="links[3]" :offset="getOffset()" />
           </p>
-          <p class="level-item has-text-centered">
+          <p class="level-item is-one-of-seven has-text-centered">
             <ItemNavbar :link="links[2]" :offset="getOffset()" />
           </p>
-          <p class="level-item has-text-centered navbar-brand">
+          <p class="level-item is-one-of-seven has-text-centered navbar-brand">
             <NuxtLink
               class="navbar-item has-logo"
               to="/"
@@ -33,13 +33,19 @@
               >
             </NuxtLink>
           </p>
-          <p class="level-item has-text-centered">
+          <p class="level-item is-one-of-seven has-text-centered">
+            <NuxtLink
+              to="/carta"
+              class="navbar-item link is-info"
+              :title="`Ir a la página de Carta y especialidades de ${owner.copyright}`"
+            >
+              Carta
+            </NuxtLink>
+          </p>
+          <p class="level-item is-one-of-seven has-text-centered">
             <ItemNavbar :link="links[4]" :offset="getOffset()" />
           </p>
-          <p class="level-item has-text-centered">
-            <ItemNavbar :link="links[5]" :offset="getOffset()" />
-          </p>
-          <p class="level-item has-text-centered">
+          <p class="level-item is-one-of-seven has-text-centered">
             <ItemNavbar :link="links[6]" :offset="getOffset()" />
           </p>
         </nav>
@@ -50,7 +56,7 @@
       <Nuxt />
     </transition>
     <!-- Aside main Menu (mobile only) -->
-    <div :class="['aside-navbar-menu', { 'is-open': isMenuShown }, 'has-text-centered']">
+    <div :class="['aside-navbar-menu', { 'is-open': showAside }, 'has-text-centered']">
       <div class="aside-logo">
         <img
           src="~/assets/images/ioanachef-con-paella.png"
@@ -60,7 +66,7 @@
           height="90"
         >
       </div>
-      <ul class="aside-nav-list" @click="isMenuShown = false">
+      <ul class="aside-nav-list" @click="showAside = false">
         <li
           :class="[link.section, { 'is-active': showLink(index) }]"
           v-for="(link, index) in links"
@@ -124,10 +130,10 @@
       <div class="navbar-brand">
         <a
           role="button"
-          :class="['navbar-burger', 'burger', { 'is-active': isMenuShown }]"
+          :class="['navbar-burger', 'burger', { 'is-active': showAside }]"
           aria-label="menu"
           aria-expanded="false"
-          @click.prevent="isMenuShown = !isMenuShown"
+          @click.prevent="showAside = !showAside"
         >
           <span aria-hidden="true" v-for="item in 3"></span>
         </a>
@@ -171,7 +177,7 @@ export default {
   data() {
     return {
       currentLink: 0,
-      isMenuShown: false,
+      showAside: false,
       owner: this.$store.state.owner,
       links: this.$store.state.pages.links
     }

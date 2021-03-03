@@ -1,0 +1,93 @@
+$color-bg: $color-lighter
+
+.carta
+  background-color: $color-lighter
+  .section
+    margin: 0
+    &:not(.with-desc)
+      padding: 1rem .5rem
+    &.with-desc
+      padding: 1rem .5rem 0
+    &.desc
+      padding: .25rem .5rem 1rem
+      font-size: 1rem
+      font-style: italic
+      .semibold
+        font-weight: 500
+
+.dishes, .dish.item
+  width: 100%
+  display: flex
+  align-items: flex-start
+
+.dishes
+  // overflow: scroll
+  margin: 0 auto
+  padding: .5rem
+  flex-direction: column
+  justify-content: flex-start
+  height: initial
+  max-width: 600px
+
+.dish
+  &.item
+    background-color: lighten($color-bg, 3%)
+    border-radius: 3px
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.1), 0 1px 1px 1px rgba(60, 64, 67, 0.05)
+    margin-bottom: .5rem
+    padding: .5rem .5rem .25rem .66rem
+    flex-wrap: nowrap
+    justify-content: flex-end
+  &.info
+    width: 100%
+    min-height: 90px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    &:not(.md-content)
+      padding-right: .5rem
+    .name:not(.price), .desc, .prices
+      margin-top: 0
+      margin-bottom: .5rem
+    .name
+      &:not(.price)
+        font-family: $font-title
+        // font-size: 1.1rem
+      &.price
+        font-size: .75rem
+        letter-spacing: .01rem
+    .desc
+      font-family: $font-main
+      font-size: .9rem
+      font-weight: 400
+      letter-spacing: .01rem
+      line-height: 1.4
+    .prices
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-items: flex-start
+      .price
+        &.item
+          display: flex
+          flex-direction: column
+          justify-content: flex-start
+          align-items: flex-start
+          margin-bottom: .25rem
+          margin-right: 1rem
+          &:last-child
+            margin-right: 0
+        &.name
+          margin-bottom: .25rem
+        &.quantity
+          color: $color-secondary
+    .allergens .allergen
+      margin-right: .25rem
+  &.img
+    width: 120px
+    height: 120px
+    margin: 0
+    img
+      border-radius: 3px

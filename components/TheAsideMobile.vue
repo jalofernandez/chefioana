@@ -1,5 +1,5 @@
 <template>
-  <div :class="['aside-navbar-menu', { 'is-open': isMenuShown }]">
+  <div :class="['aside-navbar-menu', { 'is-open': showAside }]">
     <div class="aside-logo">
       <img
         :src="require(`~/assets/images/logos/chef-ioana-logo.svg`)"
@@ -9,7 +9,7 @@
         height="50"
       >
     </div>
-    <div class="aside-nav-list" @click="isMenuShown = false">
+    <div class="aside-nav-list" @click="showAside = false">
       <!-- <NuxtLink
         class="navbar-item link is-info"
         :to="{ path: '/', hash:'#section-confortable'}"
@@ -61,7 +61,7 @@ export default {
   },
   data() {
     return {
-      isMenuShown: false,
+      showAside: false,
       owner: this.$store.state.owner
     }
   }
