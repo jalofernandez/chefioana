@@ -69,6 +69,10 @@
         />
       </transition>
 
+      <transition name="fade">
+        <TheCookiesBanner v-if="scrolling" />
+      </transition>
+
       <SectionTitle :header="header.features" :id="links[1].section" />
       <SectionChessBoard :items="features" :page="$route.name" />
 

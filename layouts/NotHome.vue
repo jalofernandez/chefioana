@@ -185,8 +185,8 @@
         </a>
       </div>
     </nav>
+    <!-- Floating items -->
     <TheCookiesBanner />
-    <!-- Floating contact item -->
     <ItemContact v-if="$mq == 'laptop' || $mq == 'desktop' || $mq == 'desktopWide'" />
   </div>
 </template>
