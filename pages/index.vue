@@ -3,7 +3,7 @@
     <header class="video-header">
       <video
         id="bgvid"
-        :poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
+        :poster="require(`~/static/ioana-chef-en-tu-casa--cover.jpg`)"
         :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
         playsinline autoplay muted loop
       >

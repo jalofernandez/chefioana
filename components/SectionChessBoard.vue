@@ -60,7 +60,7 @@
             </picture>
             <video
               class="has-aspect-ratio is-16by9"
-              :data-poster="require(`~/static/chef-ioana-en-tu-casa.jpg`)"
+              :data-poster="require(`~/static/ioana-chef-en-tu-casa--cover.jpg`)"
               :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`" 
               playsinline autoplay muted loop
               v-lazy-load
