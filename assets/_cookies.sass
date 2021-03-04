@@ -1,0 +1,29 @@
+// COOKIES banner
+.main-wrapper
+  &:not(.is-scrolling) .is-cookies-banner
+    max-width: 285px
+  &.is-scrolling .is-cookies-banner
+    max-width: 240px
+
+.is-cookies-banner
+  z-index: 99 // highest one less Aside mobile´s menu
+  position: fixed
+  bottom: 7rem
+  right: 2rem // same as "floatin´contact item"
+  @media screen and (max-width: 1023px)
+    bottom: 95px // to place ir higher cause mobile´s bottom navbar height
+    right: 40px
+  border-radius: 8px
+  border: 1px solid white
+  @include color-bg-opacity(white, .75)
+  backdrop-filter: saturate(180%) blur(3px)
+  margin: 0!important // to overwrite "box" element one
+  padding: .5rem
+  line-height: 1.33
+  b
+    letter-spacing: 0.01rem
+  .tag
+    cursor: pointer
+    @media (hover: hover)
+      &:hover, &:focus
+        background-color: darken($color-secondary, 8%)

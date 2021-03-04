@@ -6,7 +6,7 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div class="media-content mr-2 ml-1">
+    <div class="media-content mr-2 ml-2">
       <div class="content">
         <p>
           <span class="has-text-weight-semibold">¿Qué quieres cenar?</span>

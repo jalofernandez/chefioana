@@ -177,7 +177,9 @@
           </figure>
         </a>
       </div>
-    </nav>                                                                                                                                                        
+    </nav>
+
+    <TheCookiesBanner />                                                                                                                                                        
   </div>
 </template>
 
