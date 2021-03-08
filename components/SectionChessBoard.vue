@@ -86,7 +86,7 @@ export default {
     page: {
       type: String,
       default: null,
-      required: true
+      required: false
     }
   },
   data() {
