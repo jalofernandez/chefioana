@@ -39,7 +39,7 @@ export default {
     return {
       about: [
         '<b>Ioana Botis</b> es una afamada chef de '+this.$store.state.owner.laAntiguaBodeguita+' donde realiza sus servicios profesionales de cocina y servicio.',
-        'Se especializa en <span class="has-text-weight-medium">mariscos</span>, <span class="has-text-weight-medium">carnes maduradas</span> y productos <span class="has-text-weight-medium">vegetales frescos</span> de huerta.',
+        'Se especializa en todo tipo de <span class="has-text-weight-medium">arroces</span>, <span class="has-text-weight-medium">mariscos</span>, <span class="has-text-weight-medium">carnes maduradas</span> y productos <span class="has-text-weight-medium">vegetales frescos</span> de huerta.',
         'Bla bla bla... <em>¡Necesitamos más texto!</em>'
       ]
     }

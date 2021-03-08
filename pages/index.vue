@@ -119,7 +119,7 @@ export default {
         {
           title: 'Comodísimo',
           description:
-            'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span> y  y sin costes adicionales.',
+            'porque te llevamos la comida a casa, la <span class="has-text-weight-medium">cocinamos</span>, te <span class="has-text-weight-medium">servimos</span>, <span class="has-text-weight-medium">limpiamos</span> después y sin costes adicionales.',
           link: this.$store.state.pages.links[1].section
         },
         {
@@ -178,7 +178,7 @@ export default {
         {
           title: '...No te costará más',
           description:
-            '<b>Sin tener que pagar extras</b> de envío, incremento por terraza ni costes adicionales... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas expeciales</b> para determinados gremios.',
+            '<b>Sin tener que pagar extras</b> de envío, incremento por terraza ni costes adicionales... El precio no variará respecto al menú pactado previa cita. Además disponemos de <b>ofertas especiales</b> para determinados gremios.',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
@@ -193,35 +193,35 @@ export default {
         {
           title: '¡Es comodísimo!',
           description:
-            '<span class="has-text-weight-medium">No necesitas salir de casa</span> ni coger el coche, aguantar el tráfico, tener que dar vueltas para aparcar o pagar parking, la pereza de que haga mal tiempo...',
+            '<span class="has-text-weight-semibold">No necesitas salir de casa</span> ni coger el coche, aguantar el tráfico, tener que dar vueltas para aparcar o pagar parking, la pereza de que haga mal tiempo...',
           img: 'icons/chefioana-icon--en-casa.svg',
           alt: '¡Es comodísimo!'
         },
         {
           title: '¡Es exclusivo!',
           description:
-            'Tienes al <span class="has-text-weight-medium">cocinero y camarero en exclusiva</span> para ti y tus comensales sin tiempos de espera, ni guardar cola y al ritmo que tú marques.',
+            'Tienes al <span class="has-text-weight-semibold">cocinero y camarero en exclusiva</span> para ti y tus comensales sin tiempos de espera, ni guardar cola y al ritmo que tú marques.',
           img: 'icons/chefioana-icon--exclusivo.svg',
           alt: '¡Es exclusivo!'
         },
         {
           title: '¡Sin molestias!',
           description:
-            '<span class="has-text-weight-medium">Nada de</span> tener que <span class="has-text-weight-medium">hacer la compra</span> antes, <span class="has-text-weight-medium">cocinar</span>, <span class="has-text-weight-medium">servir</span> mientras los demas disfrutan ya de la cena, <span class="has-text-weight-medium">fregar</span> o poner lavavajillas y retirar tras la velada...',
+            '<span class="has-text-weight-semibold">Nada de</span> tener que <span class="has-text-weight-semibold">hacer la compra</span> antes, <span class="has-text-weight-semibold">cocinar</span>, <span class="has-text-weight-semibold">servir</span> mientras los demas disfrutan ya de la cena, <span class="has-text-weight-semibold">fregar</span> o poner lavavajillas y retirar tras la velada...',
           img: 'icons/chefioana-icon--cocinar.svg',
           alt: '¡Es molestias!'
         },
         {
           title: '¡El mismo precio!',
           description:
-            'Te cuesta igual que en la '+this.$store.state.owner.laAntiguaBodeguita+', <span class="has-text-weight-medium">sin costes adicionales</span> de trasporte, incremento por terraza...',
+            'Te cuesta igual que en la '+this.$store.state.owner.laAntiguaBodeguita+', <span class="has-text-weight-semibold">sin costes adicionales</span> de trasporte, incremento por terraza...',
           img: 'icons/chefioana-icon--precio.svg',
           alt: '¡Es mismo precio!'
         },
         {
           title: '¡Con quien tú quieras!',
           description:
-            '<span class="has-text-weight-medium">Niños y mascotas permitidas</span>. Como es tu casa el derecho de admisión lo pones tú 😁',
+            '<span class="has-text-weight-semibold">Niños y mascotas permitidas</span>. Como es tu casa el derecho de admisión lo pones tú 😁',
           img: 'icons/chefioana-icon--mascotas.svg',
           alt: '¡Con quien tú quieras!'
         },
@@ -260,7 +260,7 @@ export default {
         {
           title: 'Medidas anticovid-19',
           description:
-            'Porque <b>tu seguridad</b> y la mia <b>es lo más importante</b>, por supuesto, y para ello voy equipada con todas las medidas de higiene y seguridad que mi profesión y la situación actual requieren. Llevo <span class="has-text-weight-medium">gel hidroalcóholico</span>, <span class="has-text-weight-medium">marcarilla</span>, <span class="has-text-weight-medium">guantes</span> y <span class="has-text-weight-medium">test PCR</span> para hacer en la entrada de tu casa si así lo deseas. <br/>¡Que por seguridad no sea!',
+            'Porque <b>tu seguridad</b> y la mia <b>es lo más importante</b>, por supuesto, y para ello voy equipada con todas las medidas de higiene y seguridad que mi profesión y la situación actual requieren. Llevo <span class="has-text-weight-medium">gel hidroalcóholico</span>, <span class="has-text-weight-medium">marcarilla</span>, <span class="has-text-weight-medium">guantes</span> y <span class="has-text-weight-medium">test PCR</span> para hacer en la entrada de tu casa si así lo deseas. <br/>¡Qué por seguridad no sea!',
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
