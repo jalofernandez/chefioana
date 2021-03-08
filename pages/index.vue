@@ -143,9 +143,9 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: false,
-            src: '640x360.png',
-            alt: 'Ioana Botis'
+            video: true,
+            src: 'chefioana-video-cocinando.mp4',
+            alt: 'Ioana Chef cocinando en tu casa'
           },
           reflected: false
         },
@@ -156,9 +156,9 @@ export default {
           link: 'Reservar en el',
           href: 'tel:644093470',
           asset: {
-            video: false,
-            src: '640x360.png',
-            alt: 'Ioana Botis'
+            video: true,
+            src: 'chefioana-video-servicio-de-mesa.mp4',
+            alt: 'Ioana Chef realizando un servicio de mesa'
           },
           reflected: true
         },
@@ -171,7 +171,7 @@ export default {
           asset: {
             video: true,
             src: 'chefioana-video-menu-limpieza.mp4',
-            alt: 'Ioana Botis'
+            alt: 'Ioana Chef realizando la limpieza posterior a un servicio'
           },
           reflected: false
         },
