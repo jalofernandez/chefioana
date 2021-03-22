@@ -156,6 +156,12 @@ export default {
     },
   },
 
+  generate: {
+    subFolders: false,
+    fallback: '404.html'
+    // dir: 'public' // to deploy in Google Firebase ('dist' by default)
+  },
+
   build: {
     postcss: {
       preset: {
