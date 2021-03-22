@@ -7,7 +7,7 @@ export default {
   target: 'static',
   // mode: 'universal',
   head: {
-    title: 'chefioana',
+    // title: 'chefioana',
     htmlAttrs: {
       lang: 'es',
       class: ['has-navbar-fixed-top', 'has-navbar-fixed-bottom']
