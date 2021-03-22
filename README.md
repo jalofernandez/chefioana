@@ -8,7 +8,7 @@ A website template with different pages layout based on Chef Ioana Botis landing
 - Contacto (*Contact*)
 - Legal (*Legal*)
 - Sitemap (*Sitemap*)
-- Error (*404*, *500* & *200*)
+- Error (*404* & *500*)
 
 ## Credits and Dependencies
 
