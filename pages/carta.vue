@@ -193,7 +193,7 @@ export default {
               show: false,
               name: 'Pulpo a feira con cachelos',
               img: 'pulpo-cachelos',
-              desc: 'Pulpo cocido al estilo tradicional gallego con acéite cruda, pimentón de la Vera y sal gruesa con cachelos, la auténtica patata norteña cocida.',
+              desc: 'Pulpo cocido al estilo tradicional gallego con aceite cruda, pimentón de la Vera y sal gruesa con cachelos, la auténtica patata norteña cocida.',
               prices: [{ name: 'Precio', price: '18' }],
               allergens: ['moluscos', 'pescado'],
             },

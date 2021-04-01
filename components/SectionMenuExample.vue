@@ -76,7 +76,7 @@ export default {
           items: [
             {
               description:
-                '"<b>Pulpo</b> cocido al estilo tradicional gallego con acéite cruda, <span class="has-text-weight-medium">pimentón de la Vera</span> y sal gruesa con <span class="has-text-weight-medium">cachelos</span>."',
+                '"<b>Pulpo</b> cocido al estilo tradicional gallego con aceite cruda, <span class="has-text-weight-medium">pimentón de la Vera</span> y sal gruesa con <span class="has-text-weight-medium">cachelos</span>."',
               src: 'chefioana-video-menu-tapas'
             },
             {
