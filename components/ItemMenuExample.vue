@@ -20,7 +20,8 @@
       v-if="dish.description"
     ></p>
     <br v-if="dish.name || dish.description"/>
-    <div class="has-frame is-video" v-if="dish.src">
+    <!-- WITH local VIDEO -->
+    <!-- <div class="has-frame is-video" v-if="dish.src">
       <picture class="is-frame">
         <img
           class="artwork"
@@ -37,7 +38,21 @@
       >
         <source :data-src="require(`~/assets/videos/${dish.src}.mp4`)" type="video/mp4">
       </video>
-    </div>
+    </div> -->
+    <!-- With IFRAME -->
+    <figure class="image is-16by9" v-if="dish.src">
+      <iframe
+        class="has-ratio"
+        :data-src="`https://www.youtube.com/embed/${dish.src}`"
+        :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`"
+        allowfullscreen
+        autoplay="1"
+        muted
+        loop
+        type="text/html"
+        v-lazy-load
+      ></iframe>
+    </figure>
   </article>
 </template>
 

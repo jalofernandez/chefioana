@@ -63,13 +63,15 @@ export default {
           name: 'Entrantes',
           description:
             '"<b>Tapas</b> de <span class="has-text-weight-medium">hummus</span> tradicional, <span class="has-text-weight-medium">ensaladilla rusa</span> de mejillones y <span class="has-text-weight-medium">croquetas caseras</span> de jamón ibérico y queso manchego."',
-          src: 'chefioana-video-menu-tapas'
+          // src: 'chefioana-video-menu-tapas' // with local video
+          src: 'aOyI04cahYk'
         },
         starter: {
           name: 'Primer plato',
           description:
             '"<b>Tataki</b> de <span class="has-text-weight-medium">atún</span> rojo macerado con vinagre de arroz y jengibre salteado con <span class="has-text-weight-medium">sésamo</span> negro y salsa <span class="has-text-weight-medium">teriyaki</span>."',
-          src: 'chefioana-video-menu-tataki'
+          // src: 'chefioana-video-menu-tataki' // with local video
+          src: 'ggYMgOXy3rE'
         },
         mains: {
           name: 'Segundos platos',
@@ -78,11 +80,14 @@ export default {
               description:
                 '"<b>Pulpo</b> cocido al estilo tradicional gallego con aceite cruda, <span class="has-text-weight-medium">pimentón de la Vera</span> y sal gruesa con <span class="has-text-weight-medium">cachelos</span>."',
               src: 'chefioana-video-menu-tapas'
+              // src: 'chefioana-video-menu-pulpo-gallega' // with local video
+              // src: 'link'
             },
             {
               description:
                 '"<b>Rabo de toro</b> al <span class="has-text-weight-medium">estilo tradicional cordobés</span> con su estofado de verduras frescas de la huerta y su vino de rivera."',
-              src: 'chefioana-video-menu-rabo-de-toro'
+              // src: 'chefioana-video-menu-rabo-de-toro' // with local video
+              src: 'XHDnGXNHpm8'
             }
           ]
         },
@@ -90,13 +95,15 @@ export default {
           name: 'Postre',
           description:
             '"<b>Postre casero</b> dulce de <span class="has-text-weight-medium">3 chocolates</span>, <span class="has-text-weight-medium">nata</span> y <span class="has-text-weight-medium">caramelo</span>. Un auténtico placer como broche final."',
-          src: 'chefioana-video-menu-postre'
+          // src: 'chefioana-video-menu-postre' // with local video
+          src: 'SFTaTMpOr5M'
         },
         clean: {
           name: 'Limpieza',
           description:
             '"Tras finalizar el servicio y la degustación, mientras los comensales están de sobremesa, yo <b>recojo y limpio</b>."',
-          src: 'chefioana-video-menu-limpieza'
+          // src: 'chefioana-video-menu-limpieza' // with local video
+          src: '3tgk7-sPj8E'
         }
       }
     }

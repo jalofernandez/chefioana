@@ -50,7 +50,8 @@
               >
             </picture>
           </figure>
-          <div class="has-frame is-video" v-else>
+          <!-- WITH local VIDEO -->
+          <!-- <div class="has-frame is-video" v-else>
             <picture class="is-frame">
               <img
                 class="artwork"
@@ -67,7 +68,21 @@
             >
               <source :data-src="require(`~/assets/videos/${item.asset.src}`)" type="video/mp4">
             </video>
-          </div>
+          </div> -->
+          <!-- With IFRAME -->
+          <figure class="image is-16by9" v-else>
+            <iframe
+              class="has-ratio"
+              :data-src="`https://www.youtube.com/embed/${item.asset.src}`"
+              :title="`Vídeo de ${owner.copyright} en Valdemoro, Madrid`"
+              allowfullscreen
+              autoplay="1"
+              muted
+              loop
+              type="text/html"
+              v-lazy-load
+            ></iframe>
+          </figure>
         </div>
       </div>
     </div>
