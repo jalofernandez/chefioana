@@ -1,3 +1,4 @@
+const lang = 'es-ES'
 const author = '@jalofernandez para la Chef Ioana Botis'
 const description = 'Chef a domicilio para comer en tu casa como en el mejor restaurante y sin molestias. Reservas e información: 644 09 34 70'
 const url = 'ioanachefentucasa.com'
@@ -9,7 +10,7 @@ export default {
   head: {
     // title: 'chefioana',
     htmlAttrs: {
-      lang: 'es',
+      lang: lang,
       class: ['has-navbar-fixed-top', 'has-navbar-fixed-bottom']
     },
     bodyAttrs: {
@@ -26,7 +27,7 @@ export default {
       { hid: 'robots', name: 'robots', content: 'index, follow, archive' },
       { hid: 'generator', name: 'generator', content: 'HTML5, CSS3, Vuejs, Nuxtjs, JavaScript, SASS, PWA, SEO' },
       { hid: 'google', name: 'google', content: 'nositelinkssearchbox' },
-      { hid: 'lang', name: 'lang', content: 'es-ES' },
+      { hid: 'lang', name: 'lang', content: lang },
       { hid: 'rating', name: 'rating', content: 'General' },
       { hid: 'coverage', name: 'coverage', content: 'Worldwide' },
       //- (metas) to customize (all browsers) top navbar
@@ -41,7 +42,7 @@ export default {
       //- (metas) Open Graph + TW Cards loads globally per page. Rest ones placed in each page
       // Docs on: https://ogp.me
       // Test on: https://developers.facebook.com/tools/debug/
-      { hid: 'og:locale', property: 'og:locale', content: 'es-ES' },
+      { hid: 'og:locale', property: 'og:locale', content: lang },
       { hid: 'og:site_name', property: 'og:site_name', content: url },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://' + url + '/' + dataImage },
