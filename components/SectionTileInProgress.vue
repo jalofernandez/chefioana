@@ -20,7 +20,7 @@
                   <p class="title">Middle tile</p>
                   <p class="subtitle">With an image</p>
                   <figure class="image is-16by9">
-                    <img src="~/assets/images/640x360.png">
+                    <img src="~/assets/images/640x360.png"/>
                   </figure>
                 </article>
               </div>

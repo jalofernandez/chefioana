@@ -15,7 +15,7 @@
                   :alt="`Foto de usuario de Google de: ${review.name}`"
                   width="32"
                   height="32"
-                >
+                />
               </picture>
             </p>
           </figure>
@@ -31,7 +31,7 @@
                   alt="Icono de estrella para reseñas"
                   width="24"
                   height="24"
-                >
+                />
               </figure>
             </div>
             <p>

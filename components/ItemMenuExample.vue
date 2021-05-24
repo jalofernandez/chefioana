@@ -27,7 +27,7 @@
           class="artwork"
           src="~/static/frame-to-assets--regular.svg"
           :alt="`Marco decorativo para vídeos de ${owner.business}`"
-        >
+        />
       </picture>
       <video
         class="has-aspect-ratio is-16by9"

@@ -30,7 +30,7 @@
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 width="94"
                 height="50"
-              >
+              />
             </NuxtLink>
           </p>
           <p class="level-item is-one-of-three has-text-centered">
@@ -89,7 +89,7 @@
                 alt="Icono de llamada por teléfono"
                 width="24"
                 height="24"
-              >
+              />
             </figure>
             <span class="has-text-primary has-text-weight-semibold ml-2">
               644 09 34 70
@@ -109,7 +109,7 @@
                 alt="Icono de gorro de Chef"
                 width="24"
                 height="24"
-              >
+              />
             </figure>
             <span class="has-text-warning has-text-weight-medium ml-2">
               Volver a <span class="has-text-weight-semibold">Inicio</span>
@@ -139,7 +139,7 @@
               alt="Icono de gorro de Chef"
               width="24"
               height="24"
-            >
+            />
           </figure>
           <small class="has-text-warning has-text-weight-medium">Inicio</small>
         </NuxtLink>
@@ -164,7 +164,7 @@
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             width="94"
             height="50"
-          >
+          />
         </NuxtLink>
         <a
           class="whatsapp"

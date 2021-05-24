@@ -11,7 +11,7 @@
                 alt="Foto de perfil de chef Ioana Botis"
                 width=""
                 height=""
-              >
+              />
             </figure>
           </div>
         </div>

@@ -29,7 +29,7 @@
                       alt="Icono de llamada por teléfono"
                       width="24"
                       height="24"
-                    >
+                    />
                   </figure>
                   <span class="has-text-weight-semibold">644 09 34 70</span>
                 </a>
@@ -52,7 +52,7 @@
                       alt="Icono de WhatsApp"
                       width="24"
                       height="24"
-                    >
+                    />
                   </figure>
                   <span class="has-text-weight-semibold">WhatsApp</span>
                 </a>
@@ -75,7 +75,7 @@
                       alt="Icono de WhatsApp"
                       width="24"
                       height="24"
-                    >
+                    />
                   </figure>
                   <span>Google <span class="has-text-weight-semibold">maps</span></span>
                 </a>

@@ -11,7 +11,7 @@
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             width="150"
             height="80"
-          >
+          />
         </picture>
       </div>
       <div class="has-text-centered">
@@ -104,7 +104,7 @@
                   :alt="`Icono de ${item}`"
                   width="24"
                   height="24"
-                >
+                />
               </figure>
             </li>
           </ul>

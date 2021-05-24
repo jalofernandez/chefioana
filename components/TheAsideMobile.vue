@@ -7,7 +7,7 @@
         :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
         width="94"
         height="50"
-      >
+      />
     </div>
     <div class="aside-nav-list" @click="showAside = false">
       <!-- <NuxtLink

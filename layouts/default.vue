@@ -30,7 +30,7 @@
                 :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
                 width="94"
                 height="50"
-              >
+              />
             </NuxtLink>
           </p>
           <p class="level-item is-one-of-seven has-text-centered">
@@ -64,7 +64,7 @@
           alt="Foto de perfil de chef Ioana Botis"
           width="90"
           height="90"
-        >
+        />
       </div>
       <ul class="aside-nav-list" @click="showAside = false">
         <li
@@ -98,7 +98,7 @@
                 alt="Icono de llamada por teléfono"
                 width="24"
                 height="24"
-              >
+              />
             </figure>
             <span class="has-text-primary has-text-weight-semibold ml-2">
               644 09 34 70
@@ -120,7 +120,7 @@
                 alt="Icono de WhatsApp"
                 width="24"
                 height="24"
-              >
+              />
             </figure>
             <span class="has-text-success has-text-weight-bold ml-2">
               WhatsApp
@@ -157,7 +157,7 @@
             :title="`Logotipo de ${owner.nickname} en Valdemoro, Madrid`"
             width="94"
             height="50"
-          >
+          />
         </NuxtLink>
         <a
           class="whatsapp"

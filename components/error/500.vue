@@ -25,7 +25,7 @@ export default {
         {
           title: '🔥 Internal Server Error 🔥',
           description:
-          'Parece que ha sucedido un <span class="has-text-weight-bold">error al intentar acceder al servidor</span>. <br />¡Lo sentimos! Prueba alguna de estas formas para solucionar este error:',
+          'Parece que ha sucedido un <span class="has-text-weight-bold">error al intentar acceder al servidor</span>. <br/>¡Lo sentimos! Prueba alguna de estas formas para solucionar este error:',
           asset: {
             video: false,
             src: '640x360.png',

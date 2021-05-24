@@ -25,7 +25,7 @@ export default {
         {
           title: '🔥 Página no encontrada 🔥',
           description:
-            'Parece que <span class="has-text-weight-bold">la página que buscas no existe</span>. <br />¡Lo sentimos! Podría ser por alguna de estas causas como:',
+            'Parece que <span class="has-text-weight-bold">la página que buscas no existe</span>. <br/>¡Lo sentimos! Podría ser por alguna de estas causas como:',
           asset: {
             video: false,
             src: '640x360.png',
